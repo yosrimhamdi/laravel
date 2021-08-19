@@ -37,23 +37,24 @@
     </div>
   </div>
   <div class="col-md-4">
-    <div class="card">
-      <div class="card-header">Add New Category</div>
-      <div class="card-body">
-        <form action="/categories" method="POST">
-          @csrf
-          <div class="form-group" style="margin-bottom: 1em">
-            <label for="exampleInputEmail1">Category Name</label>
-            <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            @error('name')
-              <div class="text-danger">{{ $message }}</div>
-            @enderror
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+    @if (Auth::user())
+      <div class="card">
+        <div class="card-header">Add New Category</div>
+        <div class="card-body">
+          <form action="/categories" method="POST">
+            @csrf
+            <div class="form-group" style="margin-bottom: 1em">
+              <label for="exampleInputEmail1">Category Name</label>
+              <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              @error('name')
+                <div class="text-danger">{{ $message }}</div>
+              @enderror
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
       </div>
-    </div>
-
+    @endif
   </div>
 </body>
 </html>

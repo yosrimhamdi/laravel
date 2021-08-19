@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use Illuminate\Support\Facades\DB;
 use Auth;
 
 class CategoriesController extends Controller
@@ -20,11 +21,15 @@ class CategoriesController extends Controller
       ['name.required' => 'Yo dude the name is required Man!']
     );
 
-    Category::insert([
+    $category = [
       'name' => $request->name,
       'user_id' => Auth::user()->id,
       'created_at' => new \DateTime()
-    ]);
+    ];
+    
+    // Category::insert($category);
+
+    DB::table('categories')->insert($category);
 
     return Redirect()->back()->with(
       'success',
