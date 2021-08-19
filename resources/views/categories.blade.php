@@ -27,6 +27,7 @@
               <th scope="col">id</th>
               <th scope="col">user id</th>
               <th scope="col">name</th>
+              <th scope="col">date</th>
             </tr>
           </thead>
           <tbody>
@@ -35,6 +36,11 @@
                 <th scope="row">{{$category->id  }}</th>
                 <td>{{ $category->user_id}}</td>
                 <td>{{ $category->name }}</td>
+                @if ($category->created_at)
+                  <td>{{ $category->created_at->diffForHumans() }}</td>
+                @else
+                  <td></td>
+                @endif
               </tr>             
             @endforeach
           </tbody>
