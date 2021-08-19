@@ -24,7 +24,6 @@
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">id</th>
               <th scope="col">user id</th>
               <th scope="col">name</th>
               <th scope="col">date</th>
@@ -33,7 +32,6 @@
           <tbody>
             @foreach ($categories as $category)
               <tr>
-                <th scope="row">{{$category->id  }}</th>
                 <td>{{ $category->user_id}}</td>
                 <td>{{ $category->name }}</td>                
                 <td>
@@ -46,6 +44,7 @@
           </tbody>
         </table>
       </div>
+      <div>{{ $categories->links() }}</div>
     </div>
   </div>
   <div class="col-md-4">
