@@ -9,25 +9,28 @@
 </head>
 <body style="display: flex; padding: 4em;">
   <div class="col-md-8" style="margin-right: 1em">
+    @if (session('success'))
+      <div>{{ session('success') }}</div>
+    @endif
     <div class="card">
       <div class="card-header">All Categories</div>
       <div class="card-body">
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
+              <th scope="col">id</th>
+              <th scope="col">user id</th>
+              <th scope="col">name</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
+            @foreach ($categories as $category)
+              <tr>
+                <th scope="row">{{$category->id  }}</th>
+                <td>{{ $category->user_id}}</td>
+                <td>{{ $category->name }}</td>
+              </tr>             
+            @endforeach
           </tbody>
         </table>
       </div>

@@ -9,7 +9,9 @@ use Auth;
 class CategoriesController extends Controller
 {
   public function  all() {
-    return view('categories');
+    $categories = Category::all();
+    
+    return view('categories', [ 'categories' => $categories ]);
   }
 
   public function new(Request $request) {
@@ -23,5 +25,10 @@ class CategoriesController extends Controller
       'user_id' => Auth::user()->id,
       'created_at' => new \DateTime()
     ]);
+
+    return Redirect()->back()->with(
+      'success',
+      'A new category inserted successfully'
+    );
   }
 }
