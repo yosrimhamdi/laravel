@@ -32,7 +32,7 @@
           <tbody>
             @foreach ($categories as $category)
               <tr>
-                <td>{{ $category->user_id}}</td>
+                <td>{{ $category->user->name }}</td>
                 <td>{{ $category->name }}</td>                
                 <td>
                   @if ($category->created_at)

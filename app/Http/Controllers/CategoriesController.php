@@ -10,8 +10,7 @@ use Auth;
 class CategoriesController extends Controller
 {
   public function  all() {
-    $categories = Category::latest()->paginate(5);
-    // $categories = DB::table('categories')->get();
+    $categories = Category::latest()->paginate(10);
     
     return view('categories', [ 'categories' => $categories ]);
   }

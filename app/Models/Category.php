@@ -9,8 +9,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Category extends Model
 {
     use SoftDeletes;
+
     protected $fillable = [
         'name',
         'user_id'
     ];
+
+    public function user() {
+        return $this->hasOne(User::class, 'id', 'user_id');
+    }
 }
