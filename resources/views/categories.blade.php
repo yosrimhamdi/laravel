@@ -35,12 +35,12 @@
               <tr>
                 <th scope="row">{{$category->id  }}</th>
                 <td>{{ $category->user_id}}</td>
-                <td>{{ $category->name }}</td>
-                @if ($category->created_at)
-                  <td>{{ $category->created_at->diffForHumans() }}</td>
-                @else
-                  <td></td>
-                @endif
+                <td>{{ $category->name }}</td>                
+                <td>
+                  @if ($category->created_at)
+                    {{ $category->created_at->diffForHumans() }}
+                  @endif
+                </td>
               </tr>             
             @endforeach
           </tbody>
