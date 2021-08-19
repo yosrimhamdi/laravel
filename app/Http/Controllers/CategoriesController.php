@@ -10,7 +10,7 @@ use Auth;
 class CategoriesController extends Controller
 {
   public function  all() {
-    $categories = Category::all();
+    $categories = Category::latest()->get();
     // $categories = DB::table('categories')->get();
     
     return view('categories', [ 'categories' => $categories ]);
