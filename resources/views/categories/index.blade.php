@@ -10,7 +10,7 @@
           <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg" style="display: flex; padding: 2em">
             <div class="col-md-8" style="margin-right: 1em">
               @if (session('success'))
-                <div class="alert alert-warning alert-dismissible fade show" role="alert" style="display: flex; justify-content: space-between;">
+                <div class="alert alert-success alert-dismissible fade show" role="alert" style="display: flex; justify-content: space-between;">
                   <strong>{{ session('success') }}</strong>
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -26,6 +26,7 @@
                         <th scope="col">user name</th>
                         <th scope="col">category name</th>
                         <th scope="col">date</th>
+                        <th scope="col">actions</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -37,6 +38,10 @@
                             @if ($category->created_at)
                               {{ $category->created_at->diffForHumans() }}
                             @endif
+                          </td>
+                          <td>
+                            <a href="/categories/edit/{{ $category->id }}" class="btn btn-info" style="color: white;">edit</a>
+                            <a href="/categories/delete/{{ $category->id }}" class="btn btn-danger" style="color: white;">delete</a>
                           </td>
                         </tr>             
                       @endforeach
@@ -65,7 +70,8 @@
                   </div>
                 </div>
               @endif
-            </div>          </div>
+            </div>          
+          </div>
       </div>
   </div>
 </x-app-layout>

@@ -12,28 +12,48 @@ class CategoriesController extends Controller
   public function  all() {
     $categories = Category::latest()->paginate(5);
     
-    return view('categories', [ 'categories' => $categories ]);
+    return view('categories.index', [ 'categories' => $categories ]);
   }
 
   public function new(Request $request) {
+    $this->requireName($request);
+    
+    $category = new Category;    
+    $category->name = $request->name;
+    $category->user_id = Auth::user()->id;
+    $category->save();
+
+    return $this->goHome('A new category inserted successfully');
+  }
+
+  public function delete($id) {
+    Category::find($id)->delete();
+
+    return $this->goHome('the category deleted successfully');
+  }
+
+  public function showEditPage($id) {
+    $category = Category::find($id);
+
+    return view('categories.edit', ['category' => $category]);
+  }
+
+  public function performActualEdit(Request $request, $id) {
+    $this->requireName($request);
+
+    Category::find($id)->update(['name' => $request->name]);
+
+    return $this->goHome('updated!');
+  }
+
+  private function requireName(Request $request) {
     $validated = $request->validate(
       ['name' => 'required' ], 
       ['name.required' => 'Yo dude the name is required Man!']
     );
-
-    $category = [
-      'name' => $request->name,
-      'user_id' => Auth::user()->id,
-      'created_at' => new \DateTime()
-    ];
-    
-    // Category::insert($category);
-
-    DB::table('categories')->insert($category);
-
-    return Redirect()->back()->with(
-      'success',
-      'A new category inserted successfully'
-    );
+  }
+  
+  private function goHome($message) {
+    return Redirect()->to('/categories')->with('success', $message);
   }
 }
