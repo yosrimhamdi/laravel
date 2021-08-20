@@ -42,7 +42,7 @@
                             </td>
                             <td>
                               <a href="/categories/edit/{{ $category->id }}" class="btn btn-info" style="color: white;">edit</a>
-                              <a href="/categories/delete/{{ $category->id }}" class="btn btn-danger" style="color: white;">delete</a>
+                              <a href="/categories/delete/{{ $category->id }}" class="btn btn-danger">delete</a>
                             </td>
                           </tr>             
                         @endforeach
@@ -76,7 +76,8 @@
                               @endif
                             </td>
                             <td>
-                              <a href="/categories/perm/delete/{{ $category->id }}" class="btn btn-danger" style="color: white;">delete permanently</a>
+                              <a href="/categories/perm/delete/{{ $category->id }}" class="btn btn-info" style="color: white;">restore</a>
+                              <a href="/categories/restore/{{ $category->id }}" class="btn btn-danger"">delete permanently</a>
                             </td>
                           </tr>             
                         @endforeach
