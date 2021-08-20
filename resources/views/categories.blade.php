@@ -10,8 +10,7 @@
           <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg" style="display: flex; padding: 2em">
             <div class="col-md-8" style="margin-right: 1em">
               @if (session('success'))
-                <div class="alert alert-success" role="alert">{{ session('success') }}</div>
-                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <div class="alert alert-warning alert-dismissible fade show" role="alert" style="display: flex; justify-content: space-between;">
                   <strong>{{ session('success') }}</strong>
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
