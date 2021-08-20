@@ -17,39 +17,74 @@
                   </button>
                 </div>
               @endif
-              <div class="card">
-                <div class="card-header">All Categories</div>
-                <div class="card-body">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">user name</th>
-                        <th scope="col">category name</th>
-                        <th scope="col">date</th>
-                        <th scope="col">actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      @foreach ($categories as $category)
+              @if (count($categories))
+                <div class="card" style="margin-bottom: 2em;">
+                  <div class="card-header">All Categories</div>
+                  <div class="card-body">
+                    <table class="table">
+                      <thead>
                         <tr>
-                          <td>{{ $category->user->name }}</td>
-                          <td>{{ $category->name }}</td>                
-                          <td>
-                            @if ($category->created_at)
-                              {{ $category->created_at->diffForHumans() }}
-                            @endif
-                          </td>
-                          <td>
-                            <a href="/categories/edit/{{ $category->id }}" class="btn btn-info" style="color: white;">edit</a>
-                            <a href="/categories/delete/{{ $category->id }}" class="btn btn-danger" style="color: white;">delete</a>
-                          </td>
-                        </tr>             
-                      @endforeach
-                    </tbody>
-                  </table>
+                          <th scope="col">user name</th>
+                          <th scope="col">category name</th>
+                          <th scope="col">date</th>
+                          <th scope="col">actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        @foreach ($categories as $category)
+                          <tr>
+                            <td>{{ $category->user->name }}</td>
+                            <td>{{ $category->name }}</td>                
+                            <td>
+                              @if ($category->created_at)
+                                {{ $category->created_at->diffForHumans() }}
+                              @endif
+                            </td>
+                            <td>
+                              <a href="/categories/edit/{{ $category->id }}" class="btn btn-info" style="color: white;">edit</a>
+                              <a href="/categories/delete/{{ $category->id }}" class="btn btn-danger" style="color: white;">delete</a>
+                            </td>
+                          </tr>             
+                        @endforeach
+                      </tbody>
+                    </table>
+                  </div>
+                  <div>{{ $categories->links() }}</div>
                 </div>
-                <div>{{ $categories->links() }}</div>
-              </div>
+              @endif
+              @if (count($trashedCategories))
+                <div class="card">
+                  <div class="card-header">Trashed Categories</div>
+                  <div class="card-body">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">user name</th>
+                          <th scope="col">category name</th>
+                          <th scope="col">date</th>
+                          <th scope="col">actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        @foreach ($trashedCategories as $category)
+                          <tr>
+                            <td>{{ $category->user->name }}</td>
+                            <td>{{ $category->name }}</td>                
+                            <td>
+                              @if ($category->created_at)
+                                {{ $category->created_at->diffForHumans() }}
+                              @endif
+                            </td>
+                            <td>
+                              <a href="/categories/perm/delete/{{ $category->id }}" class="btn btn-danger" style="color: white;">delete permanently</a>
+                            </td>
+                          </tr>             
+                        @endforeach
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              @endif
             </div>
             <div class="col-md-4">
               @if (Auth::user())

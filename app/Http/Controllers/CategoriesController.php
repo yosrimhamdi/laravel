@@ -11,8 +11,10 @@ class CategoriesController extends Controller
 {
   public function  all() {
     $categories = Category::latest()->paginate(5);
+
+    $trashedCategories = Category::onlyTrashed()->get();
     
-    return view('categories.index', [ 'categories' => $categories ]);
+    return view('categories.index', compact('categories', 'trashedCategories'));
   }
 
   public function new(Request $request) {
