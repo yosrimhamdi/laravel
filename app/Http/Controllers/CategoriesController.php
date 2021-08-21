@@ -18,7 +18,7 @@ class CategoriesController extends Controller
   }
 
   public function new(Request $request) {
-    $this->requireName($request);
+    $this->validate($request);
     
     $category = new Category;    
     $category->name = $request->name;
@@ -41,14 +41,14 @@ class CategoriesController extends Controller
   }
 
   public function performActualEdit(Request $request, $id) {
-    $this->requireName($request);
+    $this->validate($request);
 
     Category::find($id)->update(['name' => $request->name]);
 
     return $this->goHome('updated!');
   }
 
-  private function requireName(Request $request) {
+  private function validate(Request $request) {
     $validated = $request->validate(
       ['name' => 'required' ], 
       ['name.required' => 'Yo dude the name is required Man!']
