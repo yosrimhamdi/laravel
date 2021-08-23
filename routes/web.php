@@ -25,3 +25,4 @@ Route::get('/categories/restore/{id}', [CategoriesController::class, 'restore'])
 Route::get('/categories/perm/delete/{id}', [CategoriesController::class, 'permDelete']);
 
 Route::get('/brands', [BrandController::class, 'index'])->name('brands');
+Route::post('/brands', [BrandController::class, 'newBrand']);
