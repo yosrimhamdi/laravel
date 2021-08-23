@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\BrandController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,3 +24,4 @@ Route::post('/categories/edit/{id}', [CategoriesController::class, 'performActua
 Route::get('/categories/restore/{id}', [CategoriesController::class, 'restore']);
 Route::get('/categories/perm/delete/{id}', [CategoriesController::class, 'permDelete']);
 
+Route::get('/brands', [BrandController::class, 'index'])->name('brands');
