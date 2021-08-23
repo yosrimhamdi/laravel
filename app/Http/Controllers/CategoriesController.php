@@ -18,7 +18,7 @@ class CategoriesController extends Controller
   }
 
   public function new(Request $request) {
-    $this->validate($request);
+    $this->validateRequest($request);
     
     $category = new Category;    
     $category->name = $request->name;
@@ -41,14 +41,14 @@ class CategoriesController extends Controller
   }
 
   public function performActualEdit(Request $request, $id) {
-    $this->validate($request);
+    $this->validateRequest($request);
 
     Category::find($id)->update(['name' => $request->name]);
 
     return $this->goHome('updated!');
   }
 
-  private function validate(Request $request) {
+  private function validateRequest(Request $request) {
     $validated = $request->validate(
       ['name' => 'required' ], 
       ['name.required' => 'Yo dude the name is required Man!']
@@ -57,5 +57,17 @@ class CategoriesController extends Controller
   
   private function goHome($message) {
     return Redirect()->to('/categories')->with('success', $message);
+  }
+
+  public function restore($id) {
+    Category::withTrashed()->find($id)->restore();
+
+    return $this->goHome('restored');
+  }
+
+  public function permDelete($id) {
+    Category::onlyTrashed()->find($id)->forceDelete();
+
+    return $this->goHome('got rid of it.');
   }
 }

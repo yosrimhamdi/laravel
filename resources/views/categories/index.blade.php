@@ -76,8 +76,8 @@
                               @endif
                             </td>
                             <td>
-                              <a href="/categories/perm/delete/{{ $category->id }}" class="btn btn-info" style="color: white;">restore</a>
-                              <a href="/categories/restore/{{ $category->id }}" class="btn btn-danger"">delete permanently</a>
+                              <a href="/categories/restore/{{ $category->id }}" class="btn btn-info" style="color: white;">restore</a>
+                              <a href="/categories/perm/delete/{{ $category->id }}" class="btn btn-danger">perm delete</a>
                             </td>
                           </tr>             
                         @endforeach

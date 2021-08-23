@@ -15,8 +15,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 
-Route::get('/categories', [CategoriesController::class, 'all']);
+Route::get('/categories', [CategoriesController::class, 'all'])->name('cat');
 Route::post('/categories', [CategoriesController::class, 'new']);
 Route::get('/categories/delete/{id}', [CategoriesController::class, 'delete']);
 Route::get('/categories/edit/{id}', [CategoriesController::class, 'showEditPage']);
 Route::post('/categories/edit/{id}', [CategoriesController::class, 'performActualEdit']);
+Route::get('/categories/restore/{id}', [CategoriesController::class, 'restore']);
+Route::get('/categories/perm/delete/{id}', [CategoriesController::class, 'permDelete']);
+
