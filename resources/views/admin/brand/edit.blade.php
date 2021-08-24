@@ -9,7 +9,7 @@
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg" style="padding: 1em">
           <img src="{{ asset($brand->image) }}" alt="brand image" style="width: 300px;">
-          @include('admin.brand.form')
+          @include('admin.brand.form', [ 'new' => false ])
         </div>
       </div>
   </div>

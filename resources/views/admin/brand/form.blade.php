@@ -1,8 +1,18 @@
-<form action="/brands/edit/{{ $brand->id }}" method="POST" enctype="multipart/form-data">
+@php
+  if ($new) {
+    $action = '/brands';
+    $brandName = '';
+  } else {
+    $action = "/brands/edit/$brand->id";
+    $brandName = $brand->name;
+  }
+@endphp
+
+<form action="{{ $action }}" method="POST" enctype="multipart/form-data">
   @csrf
   <div class="form-group" style="margin-bottom: 1em">
     <label for="exampleInputEmail1">Brand Name</label>
-    <input type="text" value="{{ $brand->name }}" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Brand Name">
+    <input type="text" value="{{ $brandName }}" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Brand Name">
     @error('name')
       <span class="text-danger">{{ $message }}</span>
     @enderror

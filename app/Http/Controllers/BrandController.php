@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\File;
 class BrandController extends Controller
 {
   public function index() {
-    $brands = Brand::latest()->get();
+    $brands = Brand::latest()->paginate(3);
 
     return view('admin.brand.index', compact('brands'));
   }
@@ -32,7 +32,7 @@ class BrandController extends Controller
   public function showUpdateBrandPage($id) {
     $brand = Brand::find($id);
 
-    return view('admin.brand.edit', compact('brand'));
+    return view('admin.brand.edit', compact('brand', 'id'));
   }
 
   public function updateBrand(Request $request, $id) {
