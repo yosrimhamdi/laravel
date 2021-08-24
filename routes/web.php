@@ -26,3 +26,5 @@ Route::get('/categories/perm/delete/{id}', [CategoriesController::class, 'permDe
 
 Route::get('/brands', [BrandController::class, 'index'])->name('brands');
 Route::post('/brands', [BrandController::class, 'newBrand']);
+Route::get('brands/edit/{id}', [BrandController::class, 'showUpdateBrandPage']);
+Route::post('brands/edit/{id}', [BrandController::class, 'updateBrand']);
