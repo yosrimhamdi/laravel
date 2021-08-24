@@ -1,5 +1,6 @@
 {
   "braceStyle": "1tbs",
   "tabWidth": 2,
-  "endOfLine": "crlf"
+  "endOfLine": "crlf",
+  "singleQuote": true
 }
