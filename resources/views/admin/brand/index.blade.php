@@ -43,7 +43,7 @@
                 </table>
                 {{ $brands->links() }}  
               </div>
-              @include('admin.brand.form', [ 'new' => true ])
+              @include('admin.brand.form', [ 'action' => '/brands' ])
             </div>
           </div>
       </div>
