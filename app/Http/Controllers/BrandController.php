@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Brand;
 use Illuminate\Support\Facades\File;
+use Image;
 
 class BrandController extends Controller {
   public function index() {
@@ -19,8 +20,7 @@ class BrandController extends Controller {
       'image' => 'required|mimes:jpg,png,jpeg',
     ]);
 
-    $image = $request->file('image');
-    $imagePath = $this->saveImage($image);
+    $imagePath = $this->saveImage($request->file('image'));
 
     $brand = new Brand();
     $brand->name = $request->name;
@@ -75,11 +75,13 @@ class BrandController extends Controller {
   private function saveImage($image) {
     $id = hexdec(uniqid());
     $ext = strtolower($image->getClientOriginalExtension());
-    $fileName = $id . '.' . $ext;
-    $imageDir = 'images/brands/';
 
-    $image->move($imageDir, $fileName);
+    $imageFullPath = 'images/brands/' . $id . '.' . $ext;
 
-    return $imageDir . $fileName;
+    Image::make($image)
+      ->resize(300, 200)
+      ->save($imageFullPath);
+
+    return $imageFullPath;
   }
 }
