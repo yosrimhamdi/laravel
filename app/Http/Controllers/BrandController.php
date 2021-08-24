@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\File;
 
 class BrandController extends Controller
 {
+  private $imgPath = 'images/brands/';
+    
   public function index() {
     $brands = Brand::latest()->paginate(3);
 
@@ -16,7 +18,10 @@ class BrandController extends Controller
   }
 
   public function newBrand(Request $request) {
-    $this->valid($request);
+    $request->validate([
+      'name' => 'required',
+      'image' => 'required|mimes:jpg,png,jpeg'
+    ]);
 
     $image = $request->file('image');
     $imagePath = $this->saveImage($image);
@@ -52,7 +57,7 @@ class BrandController extends Controller
     
     $brand->update($updates);
 
-    return $this->home('band updated successfully');
+    return $this->home('brand updated successfully');
   }
 
   public function deleteBrand($id) {
@@ -65,18 +70,12 @@ class BrandController extends Controller
     return Redirect()->to('/brands')->with('success', $message);  
   }
 
-  private function valid(Request $request) {
-    $request->validate([
-      'name' => 'required',
-      'image' => 'required|mimes:jpg,png,jpeg'
-    ]);
-  }
-
   private function saveImage($image) {
-    $fileName = hexdec(uniqid()) . '.' . strtolower($image->getClientOriginalExtension());
-    $path = 'images/brands/';
-    $image->move($path, $fileName);
+    $id = hexdec(uniqid());
+    $ext = strtolower($image->getClientOriginalExtension());
+    
+    $image->move($this->imgPath, $id . $ext);
 
-    return $path . $fileName;
+    return $this->imgPath . $id . $ext;
   }
 }
