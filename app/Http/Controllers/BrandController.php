@@ -19,15 +19,15 @@ class BrandController extends Controller
       'image' => 'required|mimes:jpg,png,jpeg'
     ]);
 
-    // print_r($request->image);
     $image = $request->file('image');
-    echo $fileName = hexdec(uniqid()) . '.' . strtolower($image->getClientOriginalExtension());
-
-    $image->move('images/brands/', $fileName);
+    $fileName = hexdec(uniqid()) . '.' . strtolower($image->getClientOriginalExtension());
+    $path = 'images/brands/';
+    
+    $image->move($path, $fileName);
 
     $brand = new Brand;
     $brand->name = $request->name;
-    $brand->image = 'images/brands/'. $fileName;
+    $brand->image = $path. $fileName;
     $brand->save();
 
     return Redirect()->to('/brands')->with('success', "Brand $brand->name add successfully");  

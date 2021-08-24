@@ -28,7 +28,7 @@
                 <tbody>
                   @foreach($brands as $brand)
                     <tr>
-                      <td><img style="width: 150px; height 150px; object-fit:cover;" src="{{ $brand->image }}" alt="brand image"></td>
+                      <td><img src="{{ asset($brand->image) }}" alt="brand image" style="width: 150px; height 150px; object-fit:cover;" ></td>
                       <td>{{ $brand->name }}</td>
                       <td>{{ $brand->created_at->diffForHumans() }}</td>
                     </tr>
