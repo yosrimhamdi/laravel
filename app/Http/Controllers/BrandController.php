@@ -26,7 +26,7 @@ class BrandController extends Controller
     $brand->image = $imagePath;
     $brand->save();
 
-    return $this->goHome('success', "Brand $brand->name add successfully");
+    return $this->home('success', "Brand $brand->name add successfully");
   }
 
   public function showUpdateBrandPage($id) {
@@ -52,10 +52,16 @@ class BrandController extends Controller
     
     $brand->update($updates);
 
-    return $this->goHome('band updated successfully');
+    return $this->home('band updated successfully');
   }
 
-  private function goHome($message = null) {
+  public function deleteBrand($id) {
+    Brand::find($id)->delete();
+
+    return $this->home('brand deleted successfully');
+  }
+
+  private function home($message = null) {
     return Redirect()->to('/brands')->with('success', $message);  
   }
 
