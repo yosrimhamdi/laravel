@@ -13,6 +13,6 @@
       @error('image')
         <div class="text-danger">{{ $message }}</div>
       @enderror
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="form-group" style="margin: 1em 0"> {{ $slot }} </div>
+    <button type="submit" class="btn btn-primary">{{ $btnTitle }}</button>
 </form>
