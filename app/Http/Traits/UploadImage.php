@@ -11,7 +11,7 @@ trait UploadImage {
     $imgFullPath = $dir . $id . '.' . $ext;
 
     Image::make($image)
-      ->resize(300, 300, function ($constraint) {
+      ->resize(300, null, function ($constraint) {
         $constraint->aspectRatio();
       })
       ->save($imgFullPath);
