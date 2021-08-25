@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Brand;
+use App\Traits\UploadImage;
 use File;
-use Image;
 
 class BrandController extends Controller {
+  use UploadImage;
+
   public function index() {
     $brands = Brand::latest()->paginate(3);
 
@@ -70,18 +72,5 @@ class BrandController extends Controller {
     return Redirect()
       ->to('/brands')
       ->with('success', $message);
-  }
-
-  private function saveImage($image) {
-    $id = hexdec(uniqid());
-    $ext = strtolower($image->getClientOriginalExtension());
-
-    $imageFullPath = 'images/brands/' . $id . '.' . $ext;
-
-    Image::make($image)
-      ->resize(300, 200)
-      ->save($imageFullPath);
-
-    return $imageFullPath;
   }
 }

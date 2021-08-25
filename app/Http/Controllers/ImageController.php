@@ -24,7 +24,7 @@ class ImageController extends Controller {
     $images = $request->file('images');
 
     foreach ($images as $img) {
-      $src = $this->saveImage($img);
+      $src = $this->saveImage('images/pics/', $img);
 
       $image = new Image();
       $image->src = $src;
