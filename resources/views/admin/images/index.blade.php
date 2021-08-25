@@ -5,10 +5,7 @@
     <div class="images-container">
       @foreach ($images as $image)
         <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="{{ $image->src }}" alt="Card image cap">
-          {{-- <div class="card-body">
-            <p class="card-text">{{ $image->created_at->diffForHumans() }}</p>
-          </div> --}}
+          <img class="card-img-top" src="{{ asset($image->src) }}" alt="Card image cap">
         </div>
       @endforeach
     </div>
