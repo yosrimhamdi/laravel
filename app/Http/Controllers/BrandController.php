@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Brand;
-use App\Traits\UploadImage;
+use App\Http\Traits\UploadImage;
 use File;
 
 class BrandController extends Controller {
@@ -22,7 +22,7 @@ class BrandController extends Controller {
       'image' => 'required|mimes:jpg,png,jpeg',
     ]);
 
-    $imagePath = $this->saveImage($request->file('image'));
+    $imagePath = $this->saveImage('images/brands/', $request->file('image'));
 
     $brand = new Brand();
     $brand->name = $request->name;
@@ -48,7 +48,7 @@ class BrandController extends Controller {
     if ($image) {
       File::delete($brand->image);
 
-      $updates['image'] = $this->saveImage($image);
+      $updates['image'] = $this->saveImage('images/brands/', $image);
     } else {
       $updates['name'] = $request->name;
     }
