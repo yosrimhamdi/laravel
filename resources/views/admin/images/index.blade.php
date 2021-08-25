@@ -6,9 +6,9 @@
       @foreach ($images as $image)
         <div class="card" style="width: 15rem;">
           <img class="card-img-top" src="{{ $image->src }}" alt="Card image cap">
-          <div class="card-body">
+          {{-- <div class="card-body">
             <p class="card-text">{{ $image->created_at->diffForHumans() }}</p>
-          </div>
+          </div> --}}
         </div>
       @endforeach
     </div>
