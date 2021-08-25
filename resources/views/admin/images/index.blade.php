@@ -7,7 +7,7 @@
         <div class="card" style="width: 15rem;">
           <img class="card-img-top" src="{{ $image->src }}" alt="Card image cap">
           <div class="card-body">
-            <p class="card-text">{{ $image->create_at->diffForHumans() }}</p>
+            <p class="card-text">{{ $image->created_at->diffForHumans() }}</p>
           </div>
         </div>
       @endforeach
@@ -16,7 +16,7 @@
       @csrf
       <div class="form-group" style="margin-bottom: 1em;">
         <h4>Select And Upload Image(s)</h4>
-        <input type="file" name="images" multiple accept="image/*" class="form-control-file"
+        <input type="file" name="images[]" multiple accept="image/*" class="form-control-file"
           id="exampleFormControlFile1">
         @error('images')
           <div class="text-danger">{{ $message }}</div>

@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Image;
-use Image as I;
+use App\Http\Traits\UploadImage;
 
 class ImageController extends Controller {
+  use UploadImage;
+
   public function index() {
     $images = Image::all();
 
@@ -15,15 +17,20 @@ class ImageController extends Controller {
 
   public function uploadImages(Request $request) {
     $request->validate(
-      [
-        'images' => 'required|mimes:jpg,jpeg,png',
-      ],
-      [
-        'images.required' => 'Please select at least one image',
-        'images.mimes' => 'file type must be either jpg, jpeg or png',
-      ]
+      ['images' => 'required'],
+      ['images.required' => 'Please select at least one image']
     );
 
-    echo 'will upload';
+    $images = $request->file('images');
+
+    foreach ($images as $img) {
+      $src = $this->saveImage($img);
+
+      $image = new Image();
+      $image->src = $src;
+      $image->save();
+    }
+
+    return Redirect()->back();
   }
 }
