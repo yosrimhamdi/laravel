@@ -16,7 +16,11 @@
       @csrf
       <div class="form-group" style="margin-bottom: 1em;">
         <h4>Select And Upload Image(s)</h4>
-        <input type="file" multiple accept="image/*" class="form-control-file" id="exampleFormControlFile1">
+        <input type="file" name="images" multiple accept="image/*" class="form-control-file"
+          id="exampleFormControlFile1">
+        @error('images')
+          <div class="text-danger">{{ $message }}</div>
+        @enderror
       </div>
       <button type="submit" class="btn btn-primary mb-2">Upload</button>
     </form>
