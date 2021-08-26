@@ -15,6 +15,12 @@ Route::middleware(['auth:sanctum', 'verified'])
   })
   ->name('dashboard');
 
+Route::get('/email/verify', function () {
+  return view('auth.verify-email');
+})
+  ->middleware('auth')
+  ->name('verification.notice');
+
 Route::get('/categories', [CategoriesController::class, 'all'])->name('cat');
 Route::post('/categories', [CategoriesController::class, 'new']);
 Route::get('/categories/delete/{id}', [CategoriesController::class, 'delete']);
