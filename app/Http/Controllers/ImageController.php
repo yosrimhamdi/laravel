@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Image;
-use App\Http\Traits\UploadImage;
 use App\Http\Traits\RequireAuth;
+use App\Http\Traits\UploadImage;
+use App\Models\Image;
+use Illuminate\Http\Request;
 
 class ImageController extends Controller {
   use UploadImage;
