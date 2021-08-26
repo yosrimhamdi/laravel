@@ -6,11 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use Illuminate\Support\Facades\DB;
 use Auth;
+use App\Http\Traits\RequireAuth;
 
 class CategoriesController extends Controller {
-  public function __construct() {
-    $this->middleware('auth');
-  }
+  use RequireAuth;
 
   public function all() {
     $categories = Category::latest()->paginate(5);

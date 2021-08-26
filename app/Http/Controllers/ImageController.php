@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Image;
 use App\Http\Traits\UploadImage;
+use App\Http\Traits\RequireAuth;
 
 class ImageController extends Controller {
   use UploadImage;
+  use RequireAuth;
 
   public function index() {
     $images = Image::all();
