@@ -5,7 +5,7 @@
   >
     <!-- Aplication Brand -->
     <div class="app-brand">
-      <a href="/index.html">
+      <a href="{{ url('/') }}">
         <svg
           class="brand-icon"
           xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@
             />
           </g>
         </svg>
-        <span class="brand-name">Sleek Dashboard</span>
+        <span class="brand-name">Home Page</span>
       </a>
     </div>
     <!-- begin sidebar scrollbar -->
