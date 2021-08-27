@@ -148,7 +148,7 @@
 
             <li class="dropdown-footer">
               <form
-                action="/logout"
+                action="{{ route('logout') }}"
                 method="POST"
               >
                 @csrf
