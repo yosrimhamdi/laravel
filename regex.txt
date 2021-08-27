@@ -1,0 +1,5 @@
+(href|src)="assets/(\S*)"
+$1="{{ asset('front/$2') }}"
+
+url\(assets/(\S*)\);
+url('{{ asset('front/$1') }}')
