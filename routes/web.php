@@ -1,12 +1,12 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ImageController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-  return view('welcome');
+  return view('index');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])
