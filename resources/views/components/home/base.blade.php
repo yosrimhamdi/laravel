@@ -79,10 +79,10 @@
 
 <body>
 
+  <x-home.carousel />
   <x-home.header />
-  <div class="content"> {{ $slot }} </div>
+  <main id="main">{{ $slot }}</main>
   <x-home.footer />
-
   <a
     href="#"
     class="back-to-top"
