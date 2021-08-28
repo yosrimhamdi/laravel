@@ -7,11 +7,9 @@
       class="container"
       data-aos="fade-up"
     >
-
       <div class="section-title">
         <h2>About Us</strong></h2>
       </div>
-
       <div class="row content">
         <div
           class="col-lg-6"
@@ -43,10 +41,8 @@
           </p>
         </div>
       </div>
-
     </div>
   </section><!-- End About Us Section -->
-
   <!-- ======= Services Section ======= -->
   <section
     id="services"
@@ -56,12 +52,10 @@
       class="container"
       data-aos="fade-up"
     >
-
       <div class="section-title">
         <h2>Services</strong></h2>
         <p>Laborum repudiandae omnis voluptatum consequatur mollitia ea est voluptas ut</p>
       </div>
-
       <div class="row">
         <div
           class="col-lg-4 col-md-6 d-flex align-items-stretch"
@@ -90,7 +84,6 @@
             <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
           </div>
         </div>
-
         <div
           class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
           data-aos="zoom-in"
@@ -118,7 +111,6 @@
             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
           </div>
         </div>
-
         <div
           class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0"
           data-aos="zoom-in"
@@ -146,7 +138,6 @@
             <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
           </div>
         </div>
-
         <div
           class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
           data-aos="zoom-in"
@@ -174,7 +165,6 @@
             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
           </div>
         </div>
-
         <div
           class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
           data-aos="zoom-in"
@@ -202,7 +192,6 @@
             <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
           </div>
         </div>
-
         <div
           class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4"
           data-aos="zoom-in"
@@ -230,26 +219,21 @@
             <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
           </div>
         </div>
-
       </div>
-
     </div>
   </section><!-- End Services Section -->
-
   <!-- ======= Portfolio Section ======= -->
   <section
     id="portfolio"
     class="portfolio"
   >
     <div class="container">
-
       <div
         class="section-title"
         data-aos="fade-up"
       >
         <h2>Portfolio</h2>
       </div>
-
       <div
         class="row"
         data-aos="fade-up"
@@ -266,12 +250,10 @@
           </ul>
         </div>
       </div>
-
       <div
         class="row portfolio-container"
         data-aos="fade-up"
       >
-
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <img
             src="{{ asset('front/img/portfolio/portfolio-1.jpg') }}"
@@ -294,7 +276,6 @@
             ><i class="bx bx-link"></i></a>
           </div>
         </div>
-
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <img
             src="{{ asset('front/img/portfolio/portfolio-2.jpg') }}"
@@ -317,7 +298,6 @@
             ><i class="bx bx-link"></i></a>
           </div>
         </div>
-
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <img
             src="{{ asset('front/img/portfolio/portfolio-3.jpg') }}"
@@ -340,7 +320,6 @@
             ><i class="bx bx-link"></i></a>
           </div>
         </div>
-
         <div class="col-lg-4 col-md-6 portfolio-item filter-card">
           <img
             src="{{ asset('front/img/portfolio/portfolio-4.jpg') }}"
@@ -363,7 +342,6 @@
             ><i class="bx bx-link"></i></a>
           </div>
         </div>
-
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <img
             src="{{ asset('front/img/portfolio/portfolio-5.jpg') }}"
@@ -386,7 +364,6 @@
             ><i class="bx bx-link"></i></a>
           </div>
         </div>
-
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <img
             src="{{ asset('front/img/portfolio/portfolio-6.jpg') }}"
@@ -409,7 +386,6 @@
             ><i class="bx bx-link"></i></a>
           </div>
         </div>
-
         <div class="col-lg-4 col-md-6 portfolio-item filter-card">
           <img
             src="{{ asset('front/img/portfolio/portfolio-7.jpg') }}"
@@ -432,7 +408,6 @@
             ><i class="bx bx-link"></i></a>
           </div>
         </div>
-
         <div class="col-lg-4 col-md-6 portfolio-item filter-card">
           <img
             src="{{ asset('front/img/portfolio/portfolio-8.jpg') }}"
@@ -455,7 +430,6 @@
             ><i class="bx bx-link"></i></a>
           </div>
         </div>
-
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <img
             src="{{ asset('front/img/portfolio/portfolio-9.jpg') }}"
@@ -478,12 +452,9 @@
             ><i class="bx bx-link"></i></a>
           </div>
         </div>
-
       </div>
-
     </div>
   </section><!-- End Portfolio Section -->
-
   <!-- ======= Our Clients Section ======= -->
   <section
     id="clients"
@@ -493,98 +464,25 @@
       class="container"
       data-aos="fade-up"
     >
-
       <div class="section-title">
-        <h2>Clients</h2>
+        <h2>Brands</h2>
       </div>
-
       <div
         class="row no-gutters clients-wrap clearfix"
         data-aos="fade-up"
       >
-
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="client-logo">
-            <img
-              src="{{ asset('front/img/clients/client-1.png') }}"
-              class="img-fluid"
-              alt=""
-            >
+        @foreach ($brands as $brand)
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="client-logo">
+              <img
+                src="{{ asset($brand->image) }}"
+                class="img-fluid"
+                alt=""
+              >
+            </div>
           </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="client-logo">
-            <img
-              src="{{ asset('front/img/clients/client-2.png') }}"
-              class="img-fluid"
-              alt=""
-            >
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="client-logo">
-            <img
-              src="{{ asset('front/img/clients/client-3.png') }}"
-              class="img-fluid"
-              alt=""
-            >
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="client-logo">
-            <img
-              src="{{ asset('front/img/clients/client-4.png') }}"
-              class="img-fluid"
-              alt=""
-            >
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="client-logo">
-            <img
-              src="{{ asset('front/img/clients/client-5.png') }}"
-              class="img-fluid"
-              alt=""
-            >
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="client-logo">
-            <img
-              src="{{ asset('front/img/clients/client-6.png') }}"
-              class="img-fluid"
-              alt=""
-            >
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="client-logo">
-            <img
-              src="{{ asset('front/img/clients/client-7.png') }}"
-              class="img-fluid"
-              alt=""
-            >
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="client-logo">
-            <img
-              src="{{ asset('front/img/clients/client-8.png') }}"
-              class="img-fluid"
-              alt=""
-            >
-          </div>
-        </div>
-
+        @endforeach
       </div>
-
     </div>
   </section>
 </x-home.base>

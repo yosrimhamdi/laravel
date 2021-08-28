@@ -35,15 +35,11 @@
     </div>
     <!-- begin sidebar scrollbar -->
     <div class="sidebar-scrollbar">
-
       <!-- sidebar menu -->
       <ul
         class="nav sidebar-inner"
         id="sidebar-menu"
       >
-
-
-
         <li class="has-sub active expand">
           <a
             class="sidenav-item-link"
@@ -62,47 +58,26 @@
             data-parent="#sidebar-menu"
           >
             <div class="sub-menu">
-
-
-
               <li class="active">
                 <a
                   class="sidenav-item-link"
-                  href="index.html"
+                  href="{{ url('/brands') }}"
                 >
-                  <span class="nav-text">Ecommerce</span>
-
+                  <span class="nav-text">Brands</span>
                 </a>
               </li>
-
-
-
-
-
-
               <li>
                 <a
                   class="sidenav-item-link"
                   href="analytics.html"
                 >
                   <span class="nav-text">Analytics</span>
-
                   <span class="badge badge-success">new</span>
-
                 </a>
               </li>
-
-
-
-
             </div>
           </ul>
         </li>
-
-
-
-
-
         <li class="has-sub">
           <a
             class="sidenav-item-link"
@@ -121,8 +96,6 @@
             data-parent="#sidebar-menu"
           >
             <div class="sub-menu">
-
-
               <li class="has-sub">
                 <a
                   class="sidenav-item-link"
@@ -139,94 +112,69 @@
                   id="components"
                 >
                   <div class="sub-menu">
-
                     <li>
                       <a href="alert.html">Alert</a>
                     </li>
-
                     <li>
                       <a href="badge.html">Badge</a>
                     </li>
-
                     <li>
                       <a href="breadcrumb.html">Breadcrumb</a>
                     </li>
-
                     <li>
                       <a href="button-default.html">Button Default</a>
                     </li>
-
                     <li>
                       <a href="button-dropdown.html">Button Dropdown</a>
                     </li>
-
                     <li>
                       <a href="button-group.html">Button Group</a>
                     </li>
-
                     <li>
                       <a href="button-social.html">Button Social</a>
                     </li>
-
                     <li>
                       <a href="button-loading.html">Button Loading</a>
                     </li>
-
                     <li>
                       <a href="card.html">Card</a>
                     </li>
-
                     <li>
                       <a href="carousel.html">Carousel</a>
                     </li>
-
                     <li>
                       <a href="collapse.html">Collapse</a>
                     </li>
-
                     <li>
                       <a href="list-group.html">List Group</a>
                     </li>
-
                     <li>
                       <a href="modal.html">Modal</a>
                     </li>
-
                     <li>
                       <a href="pagination.html">Pagination</a>
                     </li>
-
                     <li>
                       <a href="popover-tooltip.html">Popover & Tooltip</a>
                     </li>
-
                     <li>
                       <a href="progress-bar.html">Progress Bar</a>
                     </li>
-
                     <li>
                       <a href="spinner.html">Spinner</a>
                     </li>
-
                     <li>
                       <a href="switcher.html">Switcher</a>
                     </li>
-
                     <li>
                       <a href="table.html">Table</a>
                     </li>
-
                     <li>
                       <a href="tab.html">Tab</a>
                     </li>
-
                   </div>
                 </ul>
               </li>
-
-
-
-
               <li class="has-sub">
                 <a
                   class="sidenav-item-link"
@@ -243,22 +191,15 @@
                   id="icons"
                 >
                   <div class="sub-menu">
-
                     <li>
                       <a href="material-icon.html">Material Icon</a>
                     </li>
-
                     <li>
                       <a href="flag-icon.html">Flag Icon</a>
                     </li>
-
                   </div>
                 </ul>
               </li>
-
-
-
-
               <li class="has-sub">
                 <a
                   class="sidenav-item-link"
@@ -275,34 +216,24 @@
                   id="forms"
                 >
                   <div class="sub-menu">
-
                     <li>
                       <a href="basic-input.html">Basic Input</a>
                     </li>
-
                     <li>
                       <a href="input-group.html">Input Group</a>
                     </li>
-
                     <li>
                       <a href="checkbox-radio.html">Checkbox & Radio</a>
                     </li>
-
                     <li>
                       <a href="form-validation.html">Form Validation</a>
                     </li>
-
                     <li>
                       <a href="form-advance.html">Form Advance</a>
                     </li>
-
                   </div>
                 </ul>
               </li>
-
-
-
-
               <li class="has-sub">
                 <a
                   class="sidenav-item-link"
@@ -319,22 +250,15 @@
                   id="maps"
                 >
                   <div class="sub-menu">
-
                     <li>
                       <a href="google-map.html">Google Map</a>
                     </li>
-
                     <li>
                       <a href="vector-map.html">Vector Map</a>
                     </li>
-
                   </div>
                 </ul>
               </li>
-
-
-
-
               <li class="has-sub">
                 <a
                   class="sidenav-item-link"
@@ -351,29 +275,18 @@
                   id="widgets"
                 >
                   <div class="sub-menu">
-
                     <li>
                       <a href="general-widget.html">General Widget</a>
                     </li>
-
                     <li>
                       <a href="chart-widget.html">Chart Widget</a>
                     </li>
-
                   </div>
                 </ul>
               </li>
-
-
-
             </div>
           </ul>
         </li>
-
-
-
-
-
         <li class="has-sub">
           <a
             class="sidenav-item-link"
@@ -392,30 +305,17 @@
             data-parent="#sidebar-menu"
           >
             <div class="sub-menu">
-
-
-
               <li>
                 <a
                   class="sidenav-item-link"
                   href="chartjs.html"
                 >
                   <span class="nav-text">ChartJS</span>
-
                 </a>
               </li>
-
-
-
-
             </div>
           </ul>
         </li>
-
-
-
-
-
         <li class="has-sub">
           <a
             class="sidenav-item-link"
@@ -434,23 +334,14 @@
             data-parent="#sidebar-menu"
           >
             <div class="sub-menu">
-
-
-
               <li>
                 <a
                   class="sidenav-item-link"
                   href="user-profile.html"
                 >
                   <span class="nav-text">User Profile</span>
-
                 </a>
               </li>
-
-
-
-
-
               <li class="has-sub">
                 <a
                   class="sidenav-item-link"
@@ -467,22 +358,15 @@
                   id="authentication"
                 >
                   <div class="sub-menu">
-
                     <li>
                       <a href="sign-in.html">Sign In</a>
                     </li>
-
                     <li>
                       <a href="sign-up.html">Sign Up</a>
                     </li>
-
                   </div>
                 </ul>
               </li>
-
-
-
-
               <li class="has-sub">
                 <a
                   class="sidenav-item-link"
@@ -499,29 +383,18 @@
                   id="others"
                 >
                   <div class="sub-menu">
-
                     <li>
                       <a href="invoice.html">invoice</a>
                     </li>
-
                     <li>
                       <a href="error.html">Error</a>
                     </li>
-
                   </div>
                 </ul>
               </li>
-
-
-
             </div>
           </ul>
         </li>
-
-
-
-
-
         <li class="has-sub">
           <a
             class="sidenav-item-link"
@@ -540,71 +413,36 @@
             data-parent="#sidebar-menu"
           >
             <div class="sub-menu">
-
-
-
               <li class="section-title">
                 Getting Started
               </li>
-
-
-
-
-
-
               <li>
                 <a
                   class="sidenav-item-link"
                   href="introduction.html"
                 >
                   <span class="nav-text">Introduction</span>
-
                 </a>
               </li>
-
-
-
-
-
-
               <li>
                 <a
                   class="sidenav-item-link"
                   href="setup.html"
                 >
                   <span class="nav-text">Setup</span>
-
                 </a>
               </li>
-
-
-
-
-
-
               <li>
                 <a
                   class="sidenav-item-link"
                   href="customization.html"
                 >
                   <span class="nav-text">Customization</span>
-
                 </a>
               </li>
-
-
-
-
-
-
               <li class="section-title">
                 Layouts
               </li>
-
-
-
-
-
               <li class="has-sub">
                 <a
                   class="sidenav-item-link"
@@ -621,30 +459,21 @@
                   id="headers"
                 >
                   <div class="sub-menu">
-
                     <li>
                       <a href="header-fixed.html">Header Fixed</a>
                     </li>
-
                     <li>
                       <a href="header-static.html">Header Static</a>
                     </li>
-
                     <li>
                       <a href="header-light.html">Header Light</a>
                     </li>
-
                     <li>
                       <a href="header-dark.html">Header Dark</a>
                     </li>
-
                   </div>
                 </ul>
               </li>
-
-
-
-
               <li class="has-sub">
                 <a
                   class="sidenav-item-link"
@@ -661,60 +490,39 @@
                   id="sidebar-navs"
                 >
                   <div class="sub-menu">
-
                     <li>
                       <a href="sidebar-open.html">Sidebar Open</a>
                     </li>
-
                     <li>
                       <a href="sidebar-minimized.html">Sidebar Minimized</a>
                     </li>
-
                     <li>
                       <a href="sidebar-offcanvas.html">Sidebar Offcanvas</a>
                     </li>
-
                     <li>
                       <a href="sidebar-with-footer.html">Sidebar With Footer</a>
                     </li>
-
                     <li>
                       <a href="sidebar-without-footer.html">Sidebar Without Footer</a>
                     </li>
-
                     <li>
                       <a href="right-sidebar.html">Right Sidebar</a>
                     </li>
-
                   </div>
                 </ul>
               </li>
-
-
-
-
-
               <li>
                 <a
                   class="sidenav-item-link"
                   href="rtl.html"
                 >
                   <span class="nav-text">RTL Direction</span>
-
                 </a>
               </li>
-
-
-
-
             </div>
           </ul>
         </li>
-
-
-
       </ul>
-
     </div>
   </div>
 </aside>
