@@ -477,7 +477,7 @@
               <img
                 src="{{ asset($brand->image) }}"
                 class="img-fluid"
-                alt=""
+                alt="{{ $brand->name }}"
               >
             </div>
           </div>
