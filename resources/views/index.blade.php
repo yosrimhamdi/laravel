@@ -127,6 +127,7 @@
             <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
           @else
             <li><a href="{{ url('/login') }}">Log In</a></li>
+            <li><a href="{{ url('/register') }}">Log In</a></li>
           @endif
         </ul>
       </nav><!-- .nav-menu -->
