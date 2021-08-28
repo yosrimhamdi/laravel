@@ -7,12 +7,12 @@ use Illuminate\View\Component;
 class Form extends Component {
   public $action;
   public $brand;
-  public $btnTitle;
+  public $title;
 
-  public function __construct($action, $brand = null, $btnTitle = "Submit") {
+  public function __construct($action, $title, $brand = null) {
     $this->action = $action;
     $this->brand = $brand;
-    $this->btnTitle = $btnTitle;
+    $this->title = $title;
   }
 
   /**

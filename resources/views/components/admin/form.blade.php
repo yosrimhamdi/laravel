@@ -1,5 +1,5 @@
 <div class="card">
-  <div class="card-header">Add New Brand</div>
+  <div class="card-header">{{ $title }}</div>
   <div class="card-body">
     <form
       action="{{ $action }}"
@@ -47,7 +47,7 @@
         <button
           type="submit"
           class="btn btn-primary"
-        >{{ $btnTitle }}</button>
+        >{{ $title }}</button>
     </form>
   </div>
 </div>
