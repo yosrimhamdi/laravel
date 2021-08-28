@@ -58,6 +58,9 @@
         </div>
       </div>
     </div>
-    <x-admin.form action="/brands" />
+    <x-admin.form
+      action="/brands"
+      title="Add New Brand"
+    />
   </div>
 </x-admin.base>
