@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ImageController;
@@ -52,3 +53,5 @@ Route::get('/brands/delete/{id}', [BrandController::class, 'deleteBrand']);
 
 Route::get('/pics', [ImageController::class, 'index'])->name('images');
 Route::post('/pics', [ImageController::class, 'uploadImages']);
+
+Route::get('/logout', [AuthController::class, 'logout']);
