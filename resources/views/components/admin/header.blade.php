@@ -109,23 +109,15 @@
             class="dropdown-toggle nav-link"
             data-toggle="dropdown"
           >
-            <img
-              src="{{ asset('admin/img/user/user.png') }}"
-              class="user-image"
-              alt="User Image"
-            />
-            <span class="d-none d-lg-inline-block">Abdus Salam</span>
+            <x-admin.user-image class="user-image" />
+            <span class="d-none d-lg-inline-block">{{ Auth::user()->name }}</span>
           </button>
           <ul class="dropdown-menu dropdown-menu-right">
             <!-- User image -->
             <li class="dropdown-header">
-              <img
-                src="{{ asset('admin/img/user/user.png') }}"
-                class="img-circle"
-                alt="User Image"
-              />
+              <x-admin.user-image class="img-circle" />
               <div class="d-inline-block">
-                Abdus Salam <small class="pt-1">abdus@gmail.com</small>
+                {{ Auth::user()->name }} <small class="pt-1">{{ Auth::user()->email }}</small>
               </div>
             </li>
 
