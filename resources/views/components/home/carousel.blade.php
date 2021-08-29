@@ -4,14 +4,20 @@
     class="carousel slide carousel-fade"
     data-ride="carousel"
   >
+
     <div
       class="carousel-inner"
       role="listbox"
     >
       @foreach ($slides as $slide)
+        @if ($loop->first)
+          {{ $x = 'active' }}
+        @else
+          {{ $x = '' }}
+        @endif
         <div
-          class="carousel-item active"
-          style="background-image: url('{{ asset($slide->image) }}')"
+          class="carousel-item {{ $x }}"
+          style="background-image: url({{ url($slide->image) }});"
         >
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
@@ -38,6 +44,7 @@
       ></span>
       <span class="sr-only">Previous</span>
     </a>
+
     <a
       class="carousel-control-next"
       href="#heroCarousel"
@@ -50,9 +57,11 @@
       ></span>
       <span class="sr-only">Next</span>
     </a>
+
     <ol
       class="carousel-indicators"
       id="hero-carousel-indicators"
     ></ol>
+
   </div>
 </section>

@@ -1,4 +1,4 @@
-<x-home.base>
+<x-home.base :slides="$slides">
   <section
     id="about-us"
     class="about-us"

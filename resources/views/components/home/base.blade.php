@@ -79,7 +79,7 @@
 
 <body>
 
-  <x-home.carousel />
+  <x-home.carousel :slides="$slides" />
   <x-home.header />
   <main id="main">{{ $slot }}</main>
   <x-home.footer />
