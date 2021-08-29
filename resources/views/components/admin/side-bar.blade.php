@@ -58,31 +58,14 @@
             data-parent="#sidebar-menu"
           >
             <div class="sub-menu">
-              <li class="active">
-                <a
-                  class="sidenav-item-link"
-                  href="{{ url('/brands') }}"
-                >
-                  <span class="nav-text">Brands</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="sidenav-item-link"
-                  href="{{ url('/admin/sliders') }}"
-                >
-                  <span class="nav-text">Sliders</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  class="sidenav-item-link"
-                  href="analytics.html"
-                >
-                  <span class="nav-text">Analytics</span>
-                  <span class="badge badge-success">new</span>
-                </a>
-              </li>
+              <x-admin.side-bar-link
+                url="/brands"
+                name="Brands"
+              />
+              <x-admin.side-bar-link
+                url="/admin/sliders"
+                name="Sliders"
+              />
             </div>
           </ul>
         </li>

@@ -56,4 +56,8 @@ Route::post('/pics', [ImageController::class, 'uploadImages']);
 
 Route::get('/logout', [AuthController::class, 'logout']);
 
-Route::match(['get', 'post'], '/admin/sliders', [SliderController::class, 'index']);
+Route::match(
+  ['get', 'post'],
+  '/admin/sliders',
+  [SliderController::class, 'index']
+);
