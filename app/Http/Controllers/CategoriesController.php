@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Category;
-use Illuminate\Support\Facades\DB;
 use Auth;
+use App\Models\Category;
+use Illuminate\Http\Request;
 use App\Http\Traits\RequireAuth;
 
 class CategoriesController extends Controller {
@@ -22,7 +21,7 @@ class CategoriesController extends Controller {
     );
   }
 
-  public function new(Request $request) {
+  public function new (Request $request) {
     $this->validateRequest($request);
 
     $category = new Category();
