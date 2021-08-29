@@ -69,6 +69,14 @@
               <li>
                 <a
                   class="sidenav-item-link"
+                  href="{{ url('/admin/sliders') }}"
+                >
+                  <span class="nav-text">Sliders</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="sidenav-item-link"
                   href="analytics.html"
                 >
                   <span class="nav-text">Analytics</span>
