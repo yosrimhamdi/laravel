@@ -39,5 +39,7 @@ class SliderController extends Controller {
       'description' => $request->description,
       'image' => $imageFullPath,
     ]);
+
+    return Redirect()->back()->with('success', 'Added a new slider image');
   }
 }

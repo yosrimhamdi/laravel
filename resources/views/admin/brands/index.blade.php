@@ -1,20 +1,4 @@
 <x-admin.base>
-  @if (session('success'))
-    <div
-      class="alert alert-success alert-dismissible fade show"
-      role="alert"
-    >
-      <span>{{ session('success') }}</span>
-      <button
-        type="button"
-        class="close"
-        data-dismiss="alert"
-        aria-label="Close"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-  @endif
   <div style="display:flex;">
     <div style="margin-right: 2em; flex-shrink: 0;">
       <div class="card">

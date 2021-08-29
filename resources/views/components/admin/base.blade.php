@@ -14,9 +14,7 @@
     name="viewport"
     content="width=device-width, initial-scale=1"
   />
-
   <title>Sleek - Admin Dashboard Template</title>
-
   <!-- GOOGLE FONTS -->
   <link
     href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500"
@@ -26,7 +24,6 @@
     href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css"
     rel="stylesheet"
   />
-
   <!-- PLUGINS CSS STYLE -->
   <link
     href="{{ asset('admin/plugins/toaster/toastr.min.css') }}"
@@ -56,22 +53,17 @@
     href="{{ asset('admin/plugins/daterangepicker/daterangepicker.css') }}"
     rel="stylesheet"
   />
-
   <!-- SLEEK CSS -->
   <link
     id="sleek-css"
     rel="stylesheet"
     href="{{ asset('admin/css/sleek.css') }}"
   />
-
-
-
   <!-- FAVICON -->
   <link
     href="{{ asset('admin/img/favicon.png') }}"
     rel="shortcut icon"
   />
-
   <!--
     HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
   -->
@@ -106,7 +98,6 @@
   </style>
 </head>
 
-
 <body
   class="sidebar-fixed sidebar-dark header-light header-fixed"
   id="body"
@@ -117,33 +108,27 @@
     });
     NProgress.start();
   </script>
-
   <div class="mobile-sticky-body-overlay"></div>
-
   <div class="wrapper">
-
     <!--
           ====================================
           ——— LEFT SIDEBAR WITH FOOTER
           =====================================
         -->
     <x-admin.side-bar />
-
     <div class="page-wrapper">
       <!--
           ====================================
           ——— HEADER
           =====================================
         -->
-
       <x-admin.header />
-
       <div class="content-wrapper">
         <div class="content">
+          <x-admin.helpers.alert />
           {{ $slot }}
         </div>
       </div>
-
       <footer class="footer mt-auto">
         <div class="copyright bg-white">
           <p>
@@ -161,11 +146,8 @@
           document.getElementById("copy-year").innerHTML = year;
         </script>
       </footer>
-
     </div>
   </div>
-
-
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCn8TFXGg17HAUcNpkwtxxyT9Io9B_NcM"
     defer
