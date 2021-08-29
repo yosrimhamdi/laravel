@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Auth;
-use App\Models\Category;
-use Illuminate\Http\Request;
 use App\Http\Traits\RequireAuth;
+use App\Models\Category;
+use Auth;
+use Illuminate\Http\Request;
 
 class CategoriesController extends Controller {
   use RequireAuth;
