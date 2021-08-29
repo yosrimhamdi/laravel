@@ -12,11 +12,11 @@ class SliderController extends Controller {
 
   public function index(R $request) {
     switch (Request::method()) {
-    case 'GET':
-      return $this->showAdminSlider();
+      case 'GET':
+        return $this->showAdminSlider();
 
-    case 'POST':
-      return $this->addNewSlider($request);
+      case 'POST':
+        return $this->addNewSlider($request);
     }
   }
 
@@ -27,11 +27,12 @@ class SliderController extends Controller {
   public function addNewSlider(R $request) {
     $request->validate([
       'title' => 'required',
-      'description' => "required",
+      'description' => 'required',
       'image' => 'required|mimes:jpg,jpeg,png',
     ]);
 
-    $imageFullPath = $this->saveImage('images/sliders/', $request->file('image'));
+    $imageFullPath = $this->saveImage('images/sliders/', $request
+        ->file('image'), ['width' => 1080, 'height' => 700]);
 
     Slider::insert([
       'title' => $request->title,

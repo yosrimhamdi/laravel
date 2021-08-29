@@ -6,7 +6,7 @@ use File;
 use Image;
 
 trait UploadImage {
-  private function saveImage($dir, $image) {
+  private function saveImage($dir, $image, $size) {
     if (!File::exists($dir)) {
       File::makeDirectory($dir);
     }
@@ -16,8 +16,9 @@ trait UploadImage {
     $imgFullPath = $dir . $id . '.' . $ext;
 
     Image::make($image)
-      ->resize(300, null, function ($constraint) {
+      ->resize($size['width'], $size['height'], function ($constraint) {
         $constraint->aspectRatio();
+        $constraint->upsize();
       })
       ->save($imgFullPath);
 
