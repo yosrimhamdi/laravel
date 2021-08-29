@@ -32,7 +32,7 @@ class SliderController extends Controller {
     ]);
 
     $imageFullPath = $this->saveImage('images/sliders/', $request
-        ->file('image'), ['width' => 1080, 'height' => 700]);
+        ->file('image'), ['width' => 1920, 'height' => 1080]);
 
     Slider::insert([
       'title' => $request->title,
