@@ -7,6 +7,7 @@
       enctype="multipart/form-data"
     >
       @csrf
+      @method($method)
       <div
         class="form-group"
         style="margin-bottom: 1em"

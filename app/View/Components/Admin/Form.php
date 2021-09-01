@@ -8,11 +8,13 @@ class Form extends Component {
   public $action;
   public $brand;
   public $title;
+  public $method;
 
-  public function __construct($action, $title, $brand = null) {
+  public function __construct($action, $title, $method, $brand = null) {
     $this->action = $action;
     $this->brand = $brand;
     $this->title = $title;
+    $this->method = $method;
   }
 
   /**

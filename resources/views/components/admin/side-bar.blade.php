@@ -59,7 +59,7 @@
           >
             <div class="sub-menu">
               <x-admin.side-bar-link
-                url="/brands"
+                url="/admin/brands"
                 name="Brands"
               />
               <x-admin.side-bar-link

@@ -42,15 +42,6 @@ Route::get('/categories/perm/delete/{id}', [
   'permDelete',
 ]);
 
-Route::get('/brands', [BrandController::class, 'index'])->name('brands');
-Route::post('/brands', [BrandController::class, 'newBrand']);
-Route::get('/brands/edit/{id}', [
-  BrandController::class,
-  'showUpdateBrandPage',
-]);
-Route::post('/brands/edit/{id}', [BrandController::class, 'updateBrand']);
-Route::get('/brands/delete/{id}', [BrandController::class, 'deleteBrand']);
-
 Route::get('/pics', [ImageController::class, 'index'])->name('images');
 Route::post('/pics', [ImageController::class, 'uploadImages']);
 
@@ -58,3 +49,6 @@ Route::get('/logout', [AuthController::class, 'logout']);
 
 Route::resource('/admin/sliders', SliderController::class)
   ->only('index', 'store');
+
+Route::resource('/admin/brands', BrandController::class)
+  ->except(['show, create']);

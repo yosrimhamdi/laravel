@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Brand;
-use App\Http\Traits\UploadImage;
 use App\Http\Traits\RequireAuth;
+use App\Http\Traits\UploadImage;
+use App\Models\Brand;
 use File;
+use Illuminate\Http\Request;
 
 class BrandController extends Controller {
   use UploadImage;
@@ -18,13 +18,13 @@ class BrandController extends Controller {
     return view('admin.brands.index', compact('brands'));
   }
 
-  public function newBrand(Request $request) {
+  public function store(Request $request) {
     $request->validate([
-      'name' => 'required',
+      'name'  => 'required',
       'image' => 'required|mimes:jpg,png,jpeg',
     ]);
 
-    $imagePath = $this->saveImage('images/brands/', $request->file('image'));
+    $imagePath = $this->saveImage('images/brands/', $request->file('image'), ['width' => 400, 'height' => 400]);
 
     $brand = new Brand();
     $brand->name = $request->name;
@@ -34,13 +34,13 @@ class BrandController extends Controller {
     return $this->home('success', "Brand $brand->name add successfully");
   }
 
-  public function showUpdateBrandPage($id) {
+  public function edit($id) {
     $brand = Brand::find($id);
 
     return view('admin.brands.edit', compact('brand', 'id'));
   }
 
-  public function updateBrand(Request $request, $id) {
+  public function update(Request $request, $id) {
     $request->validate(['name' => 'required']);
 
     $brand = Brand::find($id);
@@ -50,7 +50,7 @@ class BrandController extends Controller {
     if ($image) {
       File::delete($brand->image);
 
-      $updates['image'] = $this->saveImage('images/brands/', $image);
+      $updates['image'] = $this->saveImage('images/brands/', $image, ['width' => 400, 'height' => 400]);
     } else {
       $updates['name'] = $request->name;
     }
@@ -60,7 +60,7 @@ class BrandController extends Controller {
     return $this->home('brand updated successfully');
   }
 
-  public function deleteBrand($id) {
+  public function destroy($id) {
     $brand = Brand::find($id);
 
     File::delete($brand->image);
@@ -72,7 +72,7 @@ class BrandController extends Controller {
 
   private function home($message = null) {
     return Redirect()
-      ->to('/brands')
+      ->to('/admin/brands')
       ->with('success', $message);
   }
 }

@@ -25,14 +25,21 @@
                   <td>{{ $brand->created_at->diffForHumans() }}</td>
                   <td>
                     <a
-                      href="/brands/edit/{{ $brand->id }}"
+                      href="/admin/brands/{{ $brand->id }}/edit/"
                       class="btn btn-info"
                       style="color: white"
                     >edit</a>
-                    <a
-                      href="/brands/delete/{{ $brand->id }}"
-                      class="btn btn-danger"
-                    >delete</a>
+                    <form
+                      method="POST"
+                      action="/admin/brands/{{ $brand->id }}"
+                    >
+                      @csrf
+                      @method('DELETE')
+                      <button
+                        type="submit"
+                        class="btn btn-danger"
+                      >delete</button>
+                    </form>
                   </td>
                 </tr>
               @endforeach
@@ -43,8 +50,9 @@
       </div>
     </div>
     <x-admin.form
-      action="/brands"
+      action="/admin/brands"
       title="Add New Brand"
+      method="POST"
     />
   </div>
 </x-admin.base>

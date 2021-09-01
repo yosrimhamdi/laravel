@@ -1,6 +1,6 @@
 <x-admin.base>
   <x-admin.form
-    :action="'/brands/edit/' . $brand->id"
+    :action="'/brands/' . $brand->id"
     :brand="$brand"
     title="Update Brand"
   >
