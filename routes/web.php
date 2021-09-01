@@ -24,7 +24,7 @@ Route::get('/email/verify', function () {
 Route::get('/logout', [AuthController::class, 'logout']);
 
 Route::group([
-  'middleware' => 'auth',
+  'middleware' => ['auth', 'admin'],
   'prefix' => 'admin',
 ], function () {
   Route::resource('sliders', SliderController::class)->only('index', 'store');
