@@ -47,8 +47,10 @@ Route::post('/pics', [ImageController::class, 'uploadImages']);
 
 Route::get('/logout', [AuthController::class, 'logout']);
 
-Route::resource('/admin/sliders', SliderController::class)
-  ->only('index', 'store');
-
-Route::resource('/admin/brands', BrandController::class)
-  ->except(['show, create']);
+Route::group([
+  'middleware' => 'auth',
+  'prefix' => 'admin',
+], function () {
+  Route::resource('sliders', SliderController::class)->only('index', 'store');
+  Route::resource('brands', BrandController::class)->except(['show, create']);
+});

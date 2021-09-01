@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Traits\RequireAuth;
 use App\Http\Traits\UploadImage;
 use App\Models\Brand;
 use File;
@@ -10,7 +9,6 @@ use Illuminate\Http\Request;
 
 class BrandController extends Controller {
   use UploadImage;
-  use RequireAuth;
 
   public function index() {
     $brands = Brand::latest()->paginate(3);
