@@ -4,7 +4,6 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ImageController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,9 +40,6 @@ Route::get('/categories/perm/delete/{id}', [
   CategoriesController::class,
   'permDelete',
 ]);
-
-Route::get('/pics', [ImageController::class, 'index'])->name('images');
-Route::post('/pics', [ImageController::class, 'uploadImages']);
 
 Route::get('/logout', [AuthController::class, 'logout']);
 
