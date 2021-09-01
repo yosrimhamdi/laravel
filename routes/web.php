@@ -21,5 +21,4 @@ Route::group([
   Route::get('categories/restore/{id}', [CategoriesController::class, 'restore']);
   Route::get('categories/delete/{id}', [CategoriesController::class, 'permDelete']);
   Route::resource('categories', CategoriesController::class)->except(['show', 'create']);
-
 });
