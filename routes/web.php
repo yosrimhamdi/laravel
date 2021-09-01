@@ -56,4 +56,5 @@ Route::post('/pics', [ImageController::class, 'uploadImages']);
 
 Route::get('/logout', [AuthController::class, 'logout']);
 
-Route::match(['get', 'post'], '/admin/sliders', [SliderController::class, 'index']);
+Route::resource('/admin/sliders', SliderController::class)
+  ->only('index', 'store');
