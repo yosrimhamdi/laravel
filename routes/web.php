@@ -21,11 +21,6 @@ Route::get('/email/verify', function () {
   ->middleware('auth')
   ->name('verification.notice');
 
-Route::get('/categories/restore/{id}', [CategoriesController::class, 'restore']);
-Route::get('/categories/delete/{id}', [CategoriesController::class, 'permDelete']);
-Route::resource('categories', CategoriesController::class)
-  ->except(['show', 'create']);
-
 Route::get('/logout', [AuthController::class, 'logout']);
 
 Route::group([
@@ -34,4 +29,9 @@ Route::group([
 ], function () {
   Route::resource('sliders', SliderController::class)->only('index', 'store');
   Route::resource('brands', BrandController::class)->except(['show, create']);
+
+  Route::get('categories/restore/{id}', [CategoriesController::class, 'restore']);
+  Route::get('categories/delete/{id}', [CategoriesController::class, 'permDelete']);
+  Route::resource('categories', CategoriesController::class)->except(['show', 'create']);
+
 });

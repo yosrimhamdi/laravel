@@ -66,6 +66,10 @@
                 url="/admin/sliders"
                 name="Sliders"
               />
+              <x-admin.side-bar-link
+                url="/admin/categories"
+                name="Categories"
+              />
             </div>
           </ul>
         </li>

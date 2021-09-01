@@ -27,12 +27,12 @@
                 </td>
                 <td>
                   <a
-                    href="/categories/{{ $category->id }}/edit"
+                    href="/admin/categories/{{ $category->id }}/edit"
                     class="btn btn-info"
                     style="color: white;"
                   >edit</a>
                   <form
-                    action="/categories/{{ $category->id }}"
+                    action="/admin/categories/{{ $category->id }}"
                     method="POST"
                   >
                     @csrf
@@ -76,12 +76,12 @@
                 </td>
                 <td>
                   <a
-                    href="/categories/restore/{{ $category->id }}"
+                    href="/admin/categories/restore/{{ $category->id }}"
                     class="btn btn-info"
                     style="color: white;"
                   >restore</a>
                   <a
-                    href="/categories/delete/{{ $category->id }}"
+                    href="/admin/categories/delete/{{ $category->id }}"
                     class="btn btn-danger"
                   >perm delete</a>
                 </td>

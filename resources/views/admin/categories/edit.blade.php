@@ -1,6 +1,6 @@
 <x-admin.base>
   <form
-    action="/categories/{{ $category->id }}"
+    action="/admin/categories/{{ $category->id }}"
     method="POST"
   >
     @csrf
