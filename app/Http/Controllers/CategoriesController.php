@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Traits\RequireAuth;
 use App\Models\Category;
 use Auth;
 use Illuminate\Http\Request;
 
 class CategoriesController extends Controller {
-  use RequireAuth;
-
-  public function all() {
+  public function index() {
     $categories = Category::latest()->paginate(5);
 
     $trashedCategories = Category::onlyTrashed()->get();
@@ -21,7 +18,7 @@ class CategoriesController extends Controller {
     );
   }
 
-  public function new (Request $request) {
+  public function store(Request $request) {
     $this->validateRequest($request);
 
     $category = new Category();
@@ -32,19 +29,19 @@ class CategoriesController extends Controller {
     return $this->goHome('A new category inserted successfully');
   }
 
-  public function delete($id) {
+  public function destroy($id) {
     Category::find($id)->delete();
 
     return $this->goHome('the category deleted successfully');
   }
 
-  public function showEditPage($id) {
+  public function edit($id) {
     $category = Category::find($id);
 
-    return view('categories.edit', ['category' => $category]);
+    return view('admin.categories.edit', ['category' => $category]);
   }
 
-  public function performActualEdit(Request $request, $id) {
+  public function update(Request $request, $id) {
     $this->validateRequest($request);
 
     Category::find($id)->update(['name' => $request->name]);

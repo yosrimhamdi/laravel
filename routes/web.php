@@ -21,25 +21,10 @@ Route::get('/email/verify', function () {
   ->middleware('auth')
   ->name('verification.notice');
 
-Route::get('/categories', [CategoriesController::class, 'all'])->name('cat');
-Route::post('/categories', [CategoriesController::class, 'new']);
-Route::get('/categories/delete/{id}', [CategoriesController::class, 'delete']);
-Route::get('/categories/edit/{id}', [
-  CategoriesController::class,
-  'showEditPage',
-]);
-Route::post('/categories/edit/{id}', [
-  CategoriesController::class,
-  'performActualEdit',
-]);
-Route::get('/categories/restore/{id}', [
-  CategoriesController::class,
-  'restore',
-]);
-Route::get('/categories/perm/delete/{id}', [
-  CategoriesController::class,
-  'permDelete',
-]);
+Route::get('/categories/restore/{id}', [CategoriesController::class, 'restore']);
+Route::get('/categories/delete/{id}', [CategoriesController::class, 'permDelete']);
+Route::resource('categories', CategoriesController::class)
+  ->except(['show', 'create']);
 
 Route::get('/logout', [AuthController::class, 'logout']);
 
