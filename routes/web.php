@@ -10,14 +10,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 
 Route::middleware(['auth:sanctum', 'verified'])
-  ->get('/dashboard', function () {
-    return view('admin.index');
-  })
+  ->get('/dashboard', function () {return view('admin.index');})
   ->name('dashboard');
 
-Route::get('/email/verify', function () {
-  return view('auth.verify-email');
-})
+Route::get('/email/verify', function () {return view('auth.verify-email');})
   ->middleware('auth')
   ->name('verification.notice');
 
