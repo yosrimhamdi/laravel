@@ -126,7 +126,24 @@
       <div class="content-wrapper">
         <div class="content">
           <x-admin.helpers.alert />
-          {{ $slot }}
+          <div class="row">
+            <div class="col-md">
+              <div class="card">
+                <div class="card-header">{{ $tableTitle }}</div>
+                <div class="card-body">
+                  {{ $table }}
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card">
+                <div class="card-header">{{ $formTitle }}</div>
+                <div class="card-body">
+                  {{ $form }}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <footer class="footer mt-auto">

@@ -50,7 +50,7 @@ class CategoriesController extends Controller {
   }
 
   private function validateRequest(Request $request) {
-    $validated = $request->validate(
+    $request->validate(
       ['name' => 'required'],
       ['name.required' => 'Yo dude the name is required Man!']
     );
@@ -58,7 +58,7 @@ class CategoriesController extends Controller {
 
   private function goHome($message) {
     return Redirect()
-      ->to('/categories')
+      ->to('/admin/categories')
       ->with('success', $message);
   }
 
