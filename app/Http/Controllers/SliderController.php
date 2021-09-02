@@ -15,18 +15,18 @@ class SliderController extends Controller {
 
   public function store(Request $request) {
     $request->validate([
-      'title'       => 'required',
+      'title' => 'required',
       'description' => 'required',
-      'image'       => 'required|mimes:jpg,jpeg,png',
+      'image' => 'required|mimes:jpg,jpeg,png',
     ]);
 
     $imageFullPath = $this->saveImage('images/sliders/', $request
         ->file('image'), ['width' => 1920, 'height' => 1080]);
 
     Slider::insert([
-      'title'       => $request->title,
+      'title' => $request->title,
       'description' => $request->description,
-      'image'       => $imageFullPath,
+      'image' => $imageFullPath,
     ]);
 
     return Redirect()->back()->with('success', 'Added a new slider image');
