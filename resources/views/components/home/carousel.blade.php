@@ -10,13 +10,8 @@
       role="listbox"
     >
       @foreach ($slides as $slide)
-        @if ($loop->first)
-          {{ $x = 'active' }}
-        @else
-          {{ $x = '' }}
-        @endif
         <div
-          class="carousel-item {{ $x }}"
+          class="carousel-item {{ $loop->first ? 'active' : '' }}"
           style="background-image: url({{ url($slide->image) }});"
         >
           <div class="carousel-container">
