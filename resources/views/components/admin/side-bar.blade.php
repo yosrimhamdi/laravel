@@ -59,15 +59,15 @@
           >
             <div class="sub-menu">
               <x-admin.side-bar-link
-                url="/admin/brands"
+                :url="route('brands.index')"
                 name="Brands"
               />
               <x-admin.side-bar-link
-                url="/admin/sliders"
+                :url="route('sliders.index')"
                 name="Sliders"
               />
               <x-admin.side-bar-link
-                url="/admin/categories"
+                :url="route('categories.index')"
                 name="Categories"
               />
             </div>
