@@ -10,9 +10,7 @@ class Base extends Component {
    *
    * @return void
    */
-  public $slides;
-  public function __construct($slides) {
-    $this->slides = $slides; //
+  public function __construct() {
   }
   /**
    * Get the view / contents that represent the component.
