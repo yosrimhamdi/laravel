@@ -10,7 +10,7 @@ class SliderController extends Controller {
   use UploadImage;
 
   public function index() {
-    $sliders = Slider::latest()->get();
+    $sliders = Slider::latest()->paginate(2);
 
     return view('admin.sliders.index', compact('sliders'));
   }

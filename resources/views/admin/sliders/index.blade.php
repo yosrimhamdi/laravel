@@ -43,6 +43,7 @@
             </tbody>
           </table>
         </div>
+        {{ $sliders->links() }}
       </div>
     </div>
     <div class="col-4">
