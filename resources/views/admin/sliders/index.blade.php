@@ -60,7 +60,7 @@
           placeholder="title"
           name="title"
         >
-        <x-admin.helpers.error input="title" />
+        <x-admin.error input="title" />
       </div>
       <div class="form-group">
         <label for="exampleFormControlInput1">Slider Description</label>
@@ -71,7 +71,7 @@
           placeholder="description"
           name="description"
         ></textarea>
-        <x-admin.helpers.error input="description" />
+        <x-admin.error input="description" />
       </div>
       <div class="form-group">
         <label for="exampleFormControlFile1">Slider Image</label>
@@ -82,7 +82,7 @@
           name="image"
           accept="image/*"
         >
-        <x-admin.helpers.error input="image" />
+        <x-admin.error input="image" />
       </div>
       <button
         type="submit"

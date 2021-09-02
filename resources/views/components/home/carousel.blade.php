@@ -4,7 +4,6 @@
     class="carousel slide carousel-fade"
     data-ride="carousel"
   >
-
     <div
       class="carousel-inner"
       role="listbox"
@@ -39,7 +38,6 @@
       ></span>
       <span class="sr-only">Previous</span>
     </a>
-
     <a
       class="carousel-control-next"
       href="#heroCarousel"
@@ -52,11 +50,9 @@
       ></span>
       <span class="sr-only">Next</span>
     </a>
-
     <ol
       class="carousel-indicators"
       id="hero-carousel-indicators"
     ></ol>
-
   </div>
 </section>

@@ -22,9 +22,7 @@
           aria-describedby="emailHelp"
           placeholder="Enter Brand Name"
         >
-        @error('name')
-          <span class="text-danger">{{ $message }}</span>
-        @enderror
+        <x-admin.error input="name" />
       </div>
       <div
         class="form-group"
@@ -38,9 +36,7 @@
           class="form-control-file"
           id="exampleFormControlFile1"
         >
-        @error('image')
-          <div class="text-danger">{{ $message }}</div>
-        @enderror
+        <x-admin.error input="image" />
         <div
           class="form-group"
           style="margin: 1em 0"

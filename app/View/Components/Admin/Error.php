@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\Admin\Helpers;
+namespace App\View\Components\Admin;
 
 use Illuminate\View\Component;
 
@@ -17,6 +17,6 @@ class Error extends Component {
    * @return \Illuminate\Contracts\View\View|\Closure|string
    */
   public function render() {
-    return view('components.admin.helpers.error');
+    return view('components.admin.error');
   }
 }

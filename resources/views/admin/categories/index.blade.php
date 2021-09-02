@@ -1,5 +1,5 @@
 <x-admin.base
-  table-title="All categoreis"
+  table-title="All categories"
   form-title="Add new Category"
 >
 
@@ -64,7 +64,7 @@
           aria-describedby="emailHelp"
           placeholder="Enter email"
         >
-        <x-admin.helpers.error input="name" />
+        <x-admin.error input="name" />
       </div>
       <button
         type="submit"

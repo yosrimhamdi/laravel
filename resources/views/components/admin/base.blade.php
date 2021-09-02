@@ -125,7 +125,7 @@
       <x-admin.header />
       <div class="content-wrapper">
         <div class="content">
-          <x-admin.helpers.alert />
+          <x-admin.alert />
           @if ($slot)
             {{ $slot }}
           @endif
