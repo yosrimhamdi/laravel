@@ -7,7 +7,8 @@ use Illuminate\View\Component;
 class Base extends Component {
   public $tableTitle;
   public $formTitle;
-  public function __construct($tableTitle, $formTitle) {
+
+  public function __construct($tableTitle = '', $formTitle = '') {
     $this->tableTitle = $tableTitle;
     $this->formTitle = $formTitle;
   }

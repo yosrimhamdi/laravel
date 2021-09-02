@@ -126,23 +126,31 @@
       <div class="content-wrapper">
         <div class="content">
           <x-admin.helpers.alert />
+          @if ($slot)
+            {{ $slot }}
+          @endif
           <div class="row">
             <div class="col-md">
-              <div class="card">
-                <div class="card-header">{{ $tableTitle }}</div>
-                <div class="card-body">
-                  {{ $table }}
+              @if (isset($table))
+                <div class="card">
+                  <div class="card-header">{{ $tableTitle }}</div>
+                  <div class="card-body">
+                    {{ $table }}
+                  </div>
                 </div>
-              </div>
+              @endif
             </div>
             <div class="col-4">
-              <div class="card">
-                <div class="card-header">{{ $formTitle }}</div>
-                <div class="card-body">
-                  {{ $form }}
+              @if (isset($form))
+                <div class="card">
+                  <div class="card-header">{{ $formTitle }}</div>
+                  <div class="card-body">
+                    {{ $form }}
+                  </div>
+
                 </div>
-              </div>
             </div>
+            @endif
           </div>
         </div>
       </div>
