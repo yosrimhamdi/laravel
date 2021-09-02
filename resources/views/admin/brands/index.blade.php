@@ -45,7 +45,6 @@
       </tbody>
     </table>
     {{ $brands->links() }}
-
   </x-slot>
   <x-slot name="form">
     <x-admin.form
