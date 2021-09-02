@@ -10,7 +10,9 @@ class SliderController extends Controller {
   use UploadImage;
 
   public function index() {
-    return view('admin.sliders.index');
+    $sliders = Slider::latest()->get();
+
+    return view('admin.sliders.index', compact('sliders'));
   }
 
   public function store(Request $request) {
@@ -29,6 +31,17 @@ class SliderController extends Controller {
       'image' => $imageFullPath,
     ]);
 
-    return Redirect()->back()->with('success', 'Added a new slider image');
+    return $this->back('Added a new slider image');
+  }
+
+  public function destroy(Request $request, $id) {
+    Slider::find($id)->delete();
+
+    return $this->back('Slider deleted');
+  }
+
+  private function back($message) {
+    return Redirect()->back()->with('success', $message);
+
   }
 }

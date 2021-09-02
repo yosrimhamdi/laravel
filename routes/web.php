@@ -15,7 +15,7 @@ Route::group([
   'middleware' => ['auth', 'admin'],
   'prefix' => 'admin',
 ], function () {
-  Route::resource('sliders', SliderController::class)->only('index', 'store');
+  Route::resource('sliders', SliderController::class)->only('index', 'store', 'destroy');
   Route::resource('brands', BrandController::class)->except(['show, create']);
 
   Route::get('categories/restore/{id}', [CategoriesController::class, 'restore']);
