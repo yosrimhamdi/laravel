@@ -11,7 +11,7 @@
         class="form-control"
         id="exampleFormControlInput1"
         name="title"
-        value="{{ count($about) ? $about[0]->title : '' }}"
+        value="{{ $about->title }}"
       >
       <x-admin.error input="title" />
     </div>
@@ -22,7 +22,7 @@
         id="exampleFormControlTextarea1"
         rows="3"
         name="short-description"
-      >{{ count($about) ? $about[0]->short_description : '' }}</textarea>
+      >{{ $about->short_description }}</textarea>
       <x-admin.error input="short-description" />
     </div>
     <div class="form-group">
@@ -32,7 +32,7 @@
         id="exampleFormControlTextarea1"
         rows="3"
         name="long-description"
-      >{{ count($about) ? $about[0]->long_description : '' }}</textarea>
+      >{{ $about->long_description }}</textarea>
       <x-admin.error input="long-description" />
     </div>
     <button

@@ -10,7 +10,7 @@ class HomeController extends Controller {
   public function index() {
     $brands = Brand::all();
     $slides = Slider::all();
-    $about = About::first()->get();
+    $about = About::first();
 
     return view('index', compact(['brands', 'slides', 'about']));
   }
