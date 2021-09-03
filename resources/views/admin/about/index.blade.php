@@ -16,14 +16,13 @@
       <x-admin.error input="title" />
     </div>
     <div class="form-group">
-      <label for="exampleFormControlInput1">Shot Description</label>
-      <input
-        type="text"
+      <label for="exampleFormControlTextarea1">Long Description</label>
+      <textarea
         class="form-control"
-        id="exampleFormControlInput1"
+        id="exampleFormControlTextarea1"
+        rows="3"
         name="short-description"
-        value="{{ count($about) ? $about->short_description : '' }}"
-      >
+      >{{ count($about) ? $about->short_description : '' }}</textarea>
       <x-admin.error input="short-description" />
     </div>
     <div class="form-group">
