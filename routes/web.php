@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,4 +24,5 @@ Route::group([
   Route::get('categories/delete/{id}', [CategoriesController::class, 'permDelete']);
   Route::resource('categories', CategoriesController::class)->except(['show', 'create']);
   Route::resource('about', AboutController::class)->only(['index', 'store']);
+  Route::resource('images', ImageController::class)->only(['index', 'store']);
 });

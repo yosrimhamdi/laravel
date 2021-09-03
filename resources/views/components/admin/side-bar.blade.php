@@ -74,6 +74,10 @@
                 :url="route('categories.index')"
                 name="Categories"
               />
+              <x-admin.side-bar-link
+                :url="route('images.index')"
+                name="Images"
+              />
             </div>
           </ul>
         </li>
