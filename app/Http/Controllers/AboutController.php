@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class AboutController extends Controller {
 
   public function index() {
-    $about = About::latest()->limit(1)->get();
+    $about = About::first()->get();
 
     return view('admin.about.index', compact('about'));
   }
