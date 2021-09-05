@@ -11,7 +11,7 @@
         class="form-control"
         id="exampleFormControlInput1"
         name="title"
-        value="{{ $about->title }}"
+        value="{{ $about ? $about->title : '' }}"
       >
       <x-admin.error input="title" />
     </div>
@@ -22,7 +22,7 @@
         id="exampleFormControlTextarea1"
         rows="3"
         name="short-description"
-      >{{ $about->short_description }}</textarea>
+      >{{ $about ? $about->short_description : '' }}</textarea>
       <x-admin.error input="short-description" />
     </div>
     <div class="form-group">
@@ -32,7 +32,7 @@
         id="exampleFormControlTextarea1"
         rows="3"
         name="long-description"
-      >{{ $about->long_description }}</textarea>
+      >{{ $about ? $about->long_description : '' }}</textarea>
       <x-admin.error input="long-description" />
     </div>
     <button
