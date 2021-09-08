@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Contact;
+use App\Models\{Contact, Message};
 
 class ContactController extends Controller {
   public function index() {
@@ -52,6 +52,12 @@ class ContactController extends Controller {
     ]);
 
     return $this->back('Contact Updated');
+  }
+
+  public function showContactMessages() {
+    $messages = Message::all();
+
+    return view('admin.contact.messages', compact('messages'));
   }
 
   private function validateRequest($request) {

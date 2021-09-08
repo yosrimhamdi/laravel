@@ -104,7 +104,7 @@
                 name="Manage Contacts"
               />
               <x-admin.side-bar-link
-                :url="route('contacts.index')"
+                :url="route('contact.messages')"
                 name="Contact Messages"
               />
             </div>

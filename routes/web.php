@@ -49,6 +49,10 @@ Route::group(
     ]);
     Route::resource('images', ImageController::class)->only(['index', 'store']);
     Route::resource('about', AboutController::class)->only(['index', 'store']);
+    Route::get('contacts/messages', [
+      ContactController::class,
+      'showContactMessages',
+    ])->name('contact.messages');
     Route::resource('contacts', ContactController::class)->except('show');
   }
 );
