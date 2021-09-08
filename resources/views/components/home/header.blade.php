@@ -10,6 +10,7 @@
 
     <nav class="nav-menu d-none d-lg-block">
       <ul>
+        <li><a href="{{ url('/portfolio') }}">Portfolio</a></li>
         @if (Auth::user())
           <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
         @else

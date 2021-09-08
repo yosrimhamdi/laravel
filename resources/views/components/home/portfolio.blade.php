@@ -1,6 +1,7 @@
 <section
   id="portfolio"
   class="portfolio"
+  style="margin-top: 2em"
 >
   <div class="container">
     <div

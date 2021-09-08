@@ -3,7 +3,7 @@
   form-title="Add New Images"
 >
   <x-slot name="table">
-
+    <x-home.portfolio :images="$images" />
   </x-slot>
   <x-slot name="form">
     <form

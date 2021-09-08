@@ -16,4 +16,10 @@ class HomeController extends Controller {
 
     return view('index', compact(['brands', 'slides', 'about', 'images']));
   }
+
+  public function getPortfolioPage() {
+    $images = Image::all();
+
+    return view('portfolio', compact('images'));
+  }
 }
