@@ -2,10 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\About;
-use App\Models\Brand;
-use App\Models\Slider;
-use App\Models\Image;
+use App\Models\{About, Brand, Slider, Image, Contact};
 
 class HomeController extends Controller {
   public function index() {
@@ -24,6 +21,8 @@ class HomeController extends Controller {
   }
 
   public function getContactPage() {
-    return view('pages.contact');
+    $contacts = Contact::all();
+
+    return view('pages.contact', compact('contacts'));
   }
 }

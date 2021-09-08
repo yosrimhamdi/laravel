@@ -78,6 +78,10 @@
                 :url="route('images.index')"
                 name="Images"
               />
+              <x-admin.side-bar-link
+                :url="route('contact.index')"
+                name="Contact"
+              />
             </div>
           </ul>
         </li>

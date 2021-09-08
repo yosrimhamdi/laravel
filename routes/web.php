@@ -7,7 +7,8 @@ use App\Http\Controllers\{
   CategoriesController,
   HomeController,
   ImageController,
-  SliderController
+  SliderController,
+  ContactController
 };
 use Illuminate\Support\Facades\Route;
 
@@ -42,7 +43,11 @@ Route::group(
       'show',
       'create',
     ]);
-    Route::resource('about', AboutController::class)->only(['index', 'store']);
     Route::resource('images', ImageController::class)->only(['index', 'store']);
+    Route::resource('about', AboutController::class)->only(['index', 'store']);
+    Route::resource('contact', ContactController::class)->only([
+      'index',
+      'store',
+    ]);
   }
 );
