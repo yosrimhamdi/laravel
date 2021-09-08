@@ -126,32 +126,7 @@
       <div class="content-wrapper">
         <div class="content">
           <x-admin.alert />
-          @if ($slot)
-            {{ $slot }}
-          @endif
-          <div class="row">
-            <div class="col-md">
-              @if (isset($table))
-                <div class="card">
-                  <div class="card-header">{{ $tableTitle }}</div>
-                  <div class="card-body">
-                    {{ $table }}
-                  </div>
-                </div>
-              @endif
-            </div>
-            <div class="col-4">
-              @if (isset($form))
-                <div class="card">
-                  <div class="card-header">{{ $formTitle }}</div>
-                  <div class="card-body">
-                    {{ $form }}
-                  </div>
-
-                </div>
-            </div>
-            @endif
-          </div>
+          {{ $slot }}
         </div>
       </div>
       <footer class="footer mt-auto">
