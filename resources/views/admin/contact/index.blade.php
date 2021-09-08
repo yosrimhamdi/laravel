@@ -1,7 +1,7 @@
 <x-admin.base>
   <div>
     <a
-      href="{{ route('contact.create') }}"
+      href="{{ route('contacts.create') }}"
       class="btn btn-primary"
       style="margin-bottom: 1em"
     >Add new Contact</a>

@@ -45,6 +45,6 @@ Route::group(
     ]);
     Route::resource('images', ImageController::class)->only(['index', 'store']);
     Route::resource('about', AboutController::class)->only(['index', 'store']);
-    Route::resource('contact', ContactController::class)->except('show');
+    Route::resource('contacts', ContactController::class)->except('show');
   }
 );

@@ -1,6 +1,6 @@
 <x-admin.base>
   <form
-    action="{{ url('/admin/contact/' . $contact->id) }}"
+    action="{{ url('/admin/contacts/' . $contact->id) }}"
     method="POST"
   >
     @csrf

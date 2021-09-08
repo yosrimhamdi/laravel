@@ -1,6 +1,6 @@
 <x-admin.base>
   <form
-    action="{{ route('contact.store') }}"
+    action="{{ route('contacts.store') }}"
     method="POST"
   >
     @csrf

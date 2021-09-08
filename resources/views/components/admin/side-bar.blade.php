@@ -100,11 +100,11 @@
           >
             <div class="sub-menu">
               <x-admin.side-bar-link
-                :url="route('contact.index')"
+                :url="route('contacts.index')"
                 name="Manage Contacts"
               />
               <x-admin.side-bar-link
-                :url="route('contact.index')"
+                :url="route('contacts.index')"
                 name="Contact Messages"
               />
             </div>
