@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/portfolio', [HomeController::class, 'getPortfolioPage']);
 Route::get('/contacts', [HomeController::class, 'getContactPage']);
+Route::post('/contacts/message', [
+  HomeController::class,
+  'storeNewMessage',
+])->name('message.store');
 
 Route::get('/logout', [AuthController::class, 'logout']);
 

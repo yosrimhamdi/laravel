@@ -50,16 +50,17 @@
       >
         <div class="col-lg-10">
           <form
-            action="forms/contact.php"
-            method="post"
+            action="{{ route('message.store') }}"
+            method="POST"
             role="form"
             class="php-email-form"
           >
+            @csrf
             <div class="form-row">
               <div class="col-md-6 form-group">
                 <input
                   type="text"
-                  name="name"
+                  name="user-name"
                   class="form-control"
                   id="name"
                   placeholder="Your Name"

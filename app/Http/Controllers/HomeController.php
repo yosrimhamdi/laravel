@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\{About, Brand, Slider, Image, Contact};
+use App\Models\{About, Brand, Slider, Image, Contact, Message};
+use Illuminate\Http\Request;
 
 class HomeController extends Controller {
   public function index() {
@@ -24,5 +25,24 @@ class HomeController extends Controller {
     $contacts = Contact::all();
 
     return view('pages.contact', compact('contacts'));
+  }
+
+  public function storeNewMessage(Request $request) {
+    $request->validate([
+      'user-name' => 'required',
+      'email' => 'required',
+      'subject' => 'required',
+      'message' => 'required',
+    ]);
+
+    $message = new Message();
+
+    $message->user_name = $request->{'user-name'};
+    $message->email = $request->email;
+    $message->subject = $request->subject;
+    $message->message = $request->message;
+    $message->save();
+
+    return header('Status Code: 200');
   }
 }
