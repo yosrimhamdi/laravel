@@ -17,11 +17,7 @@ class ContactController extends Controller {
   }
 
   public function store(Request $request) {
-    $request->validate([
-      'location' => 'required',
-      'email' => 'required',
-      'phone' => 'required',
-    ]);
+    $this->validateRequest($request);
 
     $contact = new Contact();
 
@@ -47,6 +43,8 @@ class ContactController extends Controller {
   }
 
   public function update(Request $request, $id) {
+    $this->validateRequest($request);
+
     Contact::find($id)->update([
       'location' => $request->location,
       'email' => $request->email,
@@ -54,6 +52,14 @@ class ContactController extends Controller {
     ]);
 
     return $this->back('Contact Updated');
+  }
+
+  private function validateRequest($request) {
+    $request->validate([
+      'location' => 'required',
+      'email' => 'required',
+      'phone' => 'required',
+    ]);
   }
 
   private function back($message) {
