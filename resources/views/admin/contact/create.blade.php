@@ -13,6 +13,7 @@
         id="exampleInputEmail1"
         aria-describedby="emailHelp"
         placeholder="Enter email"
+        value="{{ $contact->location }}"
       >
     </div>
     <div class="form-group">
@@ -23,6 +24,7 @@
         class="form-control"
         id="exampleInputPassword1"
         placeholder="Enter Email"
+        value="{{ $contact->email }}"
       >
     </div>
     <div class="form-group">
@@ -33,6 +35,7 @@
         class="form-control"
         id="exampleInputPassword1"
         placeholder="Enter Phone"
+        value="{{ $contact->phone }}"
       >
     </div>
     <button
