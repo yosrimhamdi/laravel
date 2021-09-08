@@ -7,7 +7,13 @@ use App\Models\Contact;
 
 class ContactController extends Controller {
   public function index() {
-    return view('admin.contact.index');
+    $contacts = Contact::all();
+
+    return view('admin.contact.index', compact('contacts'));
+  }
+
+  public function create() {
+    return view('admin.contact.create');
   }
 
   public function store(Request $request) {
@@ -26,7 +32,7 @@ class ContactController extends Controller {
     $contact->save();
 
     return Redirect()
-      ->back()
+      ->to('/admin/contact')
       ->with('success', 'Added a contact');
   }
 }
