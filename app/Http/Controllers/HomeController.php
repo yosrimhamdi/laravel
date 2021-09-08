@@ -20,6 +20,6 @@ class HomeController extends Controller {
   public function getPortfolioPage() {
     $images = Image::all();
 
-    return view('portfolio', compact('images'));
+    return view('pages.portfolio', compact('images'));
   }
 }
