@@ -34,10 +34,26 @@ class ContactController extends Controller {
     return $this->back('Added a contact');
   }
 
-  public function destroy(Request $request, $id) {
+  public function destroy($id) {
     Contact::find($id)->delete();
 
     return $this->back('Contact Deleted');
+  }
+
+  public function edit($id) {
+    $contact = Contact::find($id);
+
+    return view('admin.contact.edit', compact('contact'));
+  }
+
+  public function update(Request $request, $id) {
+    Contact::find($id)->update([
+      'location' => $request->location,
+      'email' => $request->email,
+      'phone' => $request->phone,
+    ]);
+
+    return $this->back('Contact Updated');
   }
 
   private function back($message) {

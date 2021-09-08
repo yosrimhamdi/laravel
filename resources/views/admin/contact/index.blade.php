@@ -22,7 +22,7 @@
         <tbody>
           @foreach ($contacts as $contact)
             <tr>
-              <th scope="row">{{ $loop->index }}</th>
+              <th scope="row">{{ $contact->id }}</th>
               <th>{{ $contact->location }}</th>
               <th>{{ $contact->email }}</th>
               <th>{{ $contact->phone }}</th>
@@ -30,14 +30,19 @@
                 <form
                   action="/admin/contact/{{ $contact->id }}"
                   method="POST"
+                  style="display: inline-block;"
                 >
                   @csrf
                   @method('DELETE')
                   <button
                     type="submit"
                     class="btn btn-danger"
-                  >delete</button>
+                  >Delete</button>
                 </form>
+                <a
+                  href="/admin/contact/{{ $contact->id }}/edit"
+                  class="btn btn-info"
+                >Edit</a>
               </th>
             </tr>
           @endforeach
