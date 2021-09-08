@@ -22,4 +22,8 @@ class HomeController extends Controller {
 
     return view('pages.portfolio', compact('images'));
   }
+
+  public function getContactPage() {
+    return view('pages.contact');
+  }
 }
