@@ -14,12 +14,10 @@
         id="exampleInputEmail1"
         aria-describedby="emailHelp"
         placeholder="Enter email"
-        value="{{ $contact->location }}""
+        value="{{ $contact->location }}"
       >
     </div>
-    <div class="
-        form-group"
-      >
+    <div class="form-group">
       <label for="exampleInputPassword1">Email</label>
       <input
         type="email"
@@ -27,13 +25,10 @@
         class="form-control"
         id="exampleInputPassword1"
         placeholder="Enter Email"
-        value="{{ $contact->email }}""
-
+        value="{{ $contact->email }}"
       >
     </div>
-    <div class="
-        form-group"
-      >
+    <div class="form-group">
       <label for="exampleInputPassword1">Phone</label>
       <input
         type="text"
@@ -41,14 +36,12 @@
         class="form-control"
         id="exampleInputPassword1"
         placeholder="Enter Phone"
-        value="{{ $contact->phone }}""
-
+        value="{{ $contact->phone }}"
       >
     </div>
     <button
-      type="
-        submit"
-        class="btn btn-primary"
-      >Submit</button>
+      type="submit"
+      class="btn btn-primary"
+    >Submit</button>
   </form>
 </x-admin.base>
