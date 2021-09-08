@@ -11,7 +11,7 @@
     <nav class="nav-menu d-none d-lg-block">
       <ul>
         <li class="{{ $active('portfolio') }}"><a href="{{ url('/portfolio') }}">Portfolio</a></li>
-        <li class="{{ $active('contact') }}"><a href="{{ url('/contact') }}">Contact</a></li>
+        <li class="{{ $active('contacts') }}"><a href="{{ url('/contacts') }}">Contact</a></li>
         @if (Auth::user())
           <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
         @else

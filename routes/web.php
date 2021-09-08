@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/portfolio', [HomeController::class, 'getPortfolioPage']);
-Route::get('/contact', [HomeController::class, 'getContactPage']);
+Route::get('/contacts', [HomeController::class, 'getContactPage']);
 
 Route::get('/logout', [AuthController::class, 'logout']);
 
