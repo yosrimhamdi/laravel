@@ -43,6 +43,6 @@ class HomeController extends Controller {
     $message->message = $request->message;
     $message->save();
 
-    return header('Status Code: 200');
+    return response(['message' => $message], 201);
   }
 }
