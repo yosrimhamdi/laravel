@@ -16,6 +16,7 @@
         placeholder="Enter email"
         value="{{ $contact->location }}"
       >
+      <x-admin.error input="location" />
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Email</label>
@@ -27,6 +28,7 @@
         placeholder="Enter Email"
         value="{{ $contact->email }}"
       >
+      <x-admin.error input="email" />
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Phone</label>
@@ -38,6 +40,7 @@
         placeholder="Enter Phone"
         value="{{ $contact->phone }}"
       >
+      <x-admin.error input="phone" />
     </div>
     <button
       type="submit"
