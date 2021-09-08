@@ -31,8 +31,18 @@ class ContactController extends Controller {
 
     $contact->save();
 
+    return $this->back('Added a contact');
+  }
+
+  public function destroy(Request $request, $id) {
+    Contact::find($id)->delete();
+
+    return $this->back('Contact Deleted');
+  }
+
+  private function back($message) {
     return Redirect()
       ->to('/admin/contact')
-      ->with('success', 'Added a contact');
+      ->with('success', $message);
   }
 }
