@@ -12,28 +12,6 @@
     </button>
     <!-- search form -->
     <div class="search-form d-none d-lg-inline-block">
-      <div
-        class="input-group"
-        style="visibility: hidden;"
-      >
-        <button
-          type="button"
-          name="search"
-          id="search-btn"
-          class="btn btn-flat"
-        >
-          <i class="mdi mdi-magnify"></i>
-        </button>
-        <input
-          type="text"
-          name="query"
-          id="search-input"
-          class="form-control"
-          placeholder="'button', 'chart' etc."
-          autofocus
-          autocomplete="off"
-        />
-      </div>
       <div id="search-results-container">
         <ul id="search-results"></ul>
       </div>
@@ -114,20 +92,7 @@
             </li>
 
             <li>
-              <a href="{{ route('profile.show') }}">
-                <i class="mdi mdi-account"></i> My Profile
-              </a>
-            </li>
-            <li>
-              <a href="email-inbox.html">
-                <i class="mdi mdi-email"></i> Message
-              </a>
-            </li>
-            <li>
-              <a href="#"> <i class="mdi mdi-diamond-stone"></i> Projects </a>
-            </li>
-            <li>
-              <a href="#"> <i class="mdi mdi-settings"></i> Account Setting </a>
+              <a href="{{ route('profile.show') }}"> <i class="mdi mdi-settings"></i> Account Setting </a>
             </li>
 
             <li class="dropdown-footer">
