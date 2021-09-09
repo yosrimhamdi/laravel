@@ -88,6 +88,7 @@
     rel="stylesheet"
     href="{{ mix('css/app.css') }}"
   >
+  <script src="{{ asset('admin/plugins/nprogress/nprogress.js') }}"></script>
 
   @livewireStyles
 
