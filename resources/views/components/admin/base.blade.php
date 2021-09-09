@@ -24,31 +24,6 @@
     href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css"
     rel="stylesheet"
   />
-  <!-- PLUGINS CSS STYLE -->
-  <link
-    href="{{ asset('admin/plugins/toaster/toastr.min.css') }}"
-    rel="stylesheet"
-  />
-  <link
-    href="{{ asset('admin/plugins/flag-icons/css/flag-icon.min.css') }}"
-    rel="stylesheet"
-  />
-  <link
-    href="{{ asset('admin/plugins/jvectormap/jquery-jvectormap-2.0.3.css') }}"
-    rel="stylesheet"
-  />
-  <link
-    href="{{ asset('admin/plugins/ladda/ladda.min.css') }}"
-    rel="stylesheet"
-  />
-  <link
-    href="{{ asset('admin/plugins/select2/css/select2.min.css') }}"
-    rel="stylesheet"
-  />
-  <link
-    href="{{ asset('admin/plugins/daterangepicker/daterangepicker.css') }}"
-    rel="stylesheet"
-  />
   <!-- SLEEK CSS -->
   <link
     id="sleek-css"
@@ -83,16 +58,13 @@
     }
 
   </style>
-  <!-- Styles -->
   <link
     rel="stylesheet"
     href="{{ mix('css/app.css') }}"
   >
-  <script src="{{ asset('admin/plugins/nprogress/nprogress.js') }}"></script>
 
   @livewireStyles
 
-  <!-- Scripts -->
   <script
     src="{{ mix('js/app.js') }}"
     defer
@@ -139,33 +111,20 @@
   @livewireScripts
 
   <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
     src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"
   ></script>
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCn8TFXGg17HAUcNpkwtxxyT9Io9B_NcM"
-    defer
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
   ></script>
-  <script src="{{ asset('admin/plugins/jquery/jquery.min.js') }}"></script>
-  <script src="{{ asset('admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('admin/plugins/toaster/toastr.min.js') }}"></script>
-  <script src="{{ asset('admin/plugins/slimscrollbar/jquery.slimscroll.min.js') }}"></script>
-  <script src="{{ asset('admin/plugins/charts/Chart.min.js') }}"></script>
-  <script src="{{ asset('admin/plugins/ladda/spin.min.js') }}"></script>
-  <script src="{{ asset('admin/plugins/ladda/ladda.min.js') }}"></script>
-  <script src="{{ asset('admin/plugins/jquery-mask-input/jquery.mask.min.js') }}"></script>
-  <script src="{{ asset('admin/plugins/select2/js/select2.min.js') }}"></script>
-  <script src="{{ asset('admin/plugins/jvectormap/jquery-jvectormap-2.0.3.min.js') }}"></script>
-  <script src="{{ asset('admin/plugins/jvectormap/jquery-jvectormap-world-mill.js') }}"></script>
-  <script src="{{ asset('admin/plugins/daterangepicker/moment.min.js') }}"></script>
-  <script src="{{ asset('admin/plugins/daterangepicker/daterangepicker.js') }}"></script>
-  <script src="{{ asset('admin/plugins/jekyll-search.min.js') }}"></script>
-  <script src="{{ asset('admin/js/sleek.js') }}"></script>
-  <script src="{{ asset('admin/js/chart.js') }}"></script>
-  <script src="{{ asset('admin/js/date-range.js') }}"></script>
-  <script src="{{ asset('admin/js/map.js') }}"></script>
-  <script src="{{ asset('admin/js/custom.js') }}"></script>
 </body>
 
 </html>
