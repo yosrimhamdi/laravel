@@ -10,7 +10,7 @@ class SliderController extends Controller {
   use UploadImage;
 
   public function index() {
-    $sliders = Slider::latest()->paginate(2);
+    $sliders = Slider::all();
 
     return view('admin.sliders.index', compact('sliders'));
   }
@@ -22,8 +22,11 @@ class SliderController extends Controller {
       'image' => 'required|mimes:jpg,jpeg,png',
     ]);
 
-    $imageFullPath = $this->saveImage('images/sliders/', $request
-        ->file('image'), ['width' => 1920, 'height' => 1080]);
+    $imageFullPath = $this->saveImage(
+      'images/sliders/',
+      $request->file('image'),
+      ['width' => 1920, 'height' => 1080]
+    );
 
     Slider::insert([
       'title' => $request->title,
@@ -41,7 +44,8 @@ class SliderController extends Controller {
   }
 
   private function back($message) {
-    return Redirect()->back()->with('success', $message);
-
+    return Redirect()
+      ->back()
+      ->with('success', $message);
   }
 }
