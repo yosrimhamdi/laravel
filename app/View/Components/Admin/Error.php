@@ -5,10 +5,10 @@ namespace App\View\Components\Admin;
 use Illuminate\View\Component;
 
 class Error extends Component {
-  public $input;
+  public $for;
 
-  public function __construct($input) {
-    $this->input = $input;
+  public function __construct($for) {
+    $this->for = $for;
   }
 
   /**

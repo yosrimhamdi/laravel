@@ -64,7 +64,7 @@
           aria-describedby="emailHelp"
           placeholder="Enter email"
         >
-        <x-admin.error input="name" />
+        <x-admin.error for="name" />
       </div>
       <button
         type="submit"

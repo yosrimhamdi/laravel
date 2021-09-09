@@ -22,7 +22,7 @@
           aria-describedby="emailHelp"
           placeholder="Enter Brand Name"
         >
-        <x-admin.error input="name" />
+        <x-admin.error for="name" />
       </div>
       <div
         class="form-group"
@@ -36,7 +36,7 @@
           class="form-control-file"
           id="exampleFormControlFile1"
         >
-        <x-admin.error input="image" />
+        <x-admin.error for="image" />
         <div
           class="form-group"
           style="margin: 1em 0"
