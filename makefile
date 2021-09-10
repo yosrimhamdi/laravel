@@ -13,6 +13,7 @@ heroku:
 
 env:
 	node updateHerokuEnv.js
+	heroku open
 
 both:
 	$(MAKE) git
