@@ -9,4 +9,4 @@ clean:
 	php artisan view:clear
 
 heroku:
-	gitp push origin heroku
+	git push heroku master
