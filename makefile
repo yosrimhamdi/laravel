@@ -7,3 +7,6 @@ clean:
 	php artisan config:cache
 	php artisan cache:clear
 	php artisan view:clear
+
+heroku:
+	gitp push origin heroku
