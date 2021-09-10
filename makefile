@@ -10,6 +10,7 @@ clean:
 
 heroku:
 	git push heroku master
+	heroku open
 
 env:
 	node updateHerokuEnv.js
